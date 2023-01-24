@@ -44,3 +44,39 @@ header {
 body {
   height: 150vh;
 }
+
+@import "compass/css3";
+
+$dark: #212121;
+$light: #efefef;
+$color: #b3e5fc;
+
+.btn1 {
+  @include btn(0px, 100px);
+  
+  .icon-left {
+    @include icon(8px, 30px);
+    left: 0px; 
+    
+    &:before{
+      @include icon-before(8px, 30px, -20px);
+    }
+    
+    &:after{
+      @include icon-after(8px, 30px, 20px);
+    }
+    
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin btn($left, $top) {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: $top;
+  left: $left;
+  transition-duration: 0.5s;
+}

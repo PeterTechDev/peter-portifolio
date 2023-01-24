@@ -1,9 +1,20 @@
-console.log("hello world!");
 
-let navbar = document.querySelector("header");
-console.log(navbar);
-let navOffset = navbar.offsetTop + 10;
+const header = document.querySelector("header");
 
-window.addEventListener("scroll", () => {
-  (window.scrollY >= navOffset) ? navbar.classList.add("sticky") : navbar.classList.remove("sticky")
+
+function sitckyHeader() { 
+  let navOffset = header.offsetTop + 10;
+
+  window.addEventListener("scroll", () => {
+    (window.scrollY >= navOffset) ? header.classList.add("sticky") : header.classList.remove("sticky")
+  });
+}
+
+
+$('.menu').click (function(){
+  $(this).toggleClass('open');
 });
+
+
+
+sitckyHeader();
