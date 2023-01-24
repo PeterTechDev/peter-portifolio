@@ -10,11 +10,4 @@ function sitckyHeader() {
   });
 }
 
-
-$('.menu').click (function(){
-  $(this).toggleClass('open');
-});
-
-
-
 sitckyHeader();

@@ -40,6 +40,7 @@ header .container {
   height: 100%;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 header .logo {
   background-color: red;
@@ -67,4 +68,120 @@ header ul li {
 /* develpment */
 body {
   height: 150vh;
+}
+
+.toggler {
+  /* ALWAYS KEEPING THE TOGGLER OR THE CHECKBOX ON TOP OF EVERYTHING :  */
+  z-index: 5;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  right: -55px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.hamburger {
+  z-index: 4;
+  position: absolute;
+  right: -55px;
+  height: 40px;
+  width: 40px;
+  padding: 0.6rem;
+  /* FOR DISPLAYING EVERY ELEMENT IN THE CENTER : */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger > div {
+  position: relative;
+  top: 0;
+  right: 0;
+  background: white;
+  height: 2px;
+  width: 60%;
+  transition: all 0.4s ease;
+}
+
+.hamburger > div::before,
+.hamburger > div::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  background: white;
+  width: 100%;
+  height: 2px;
+  transition: all 0.4s ease;
+}
+
+.hamburger > div::after {
+  top: 10px;
+}
+
+/* IF THE TOGGLER IS IN ITS CHECKED STATE, THEN SETTING THE BACKGROUND OF THE MIDDLE LAYER TO COMPLETE BLACK AND OPAQUE :  */
+.toggler:checked + .hamburger > div {
+  background: rgba(147, 219, 13, 0);
+}
+
+.toggler:checked + .hamburger > div::before {
+  top: 0;
+  transform: rotate(45deg);
+  background: black;
+}
+
+.toggler:checked + .hamburger > div::after {
+  top: 0;
+  transform: rotate(135deg);
+  background: black;
+}
+
+.toggler:checked ~ .menu {
+  width: 45%;
+  height: 100%;
+}
+
+@media (min-width: 960px) {
+  .header {
+    background-color: rgb(61, 116, 168);
+  }
+  .menu {
+    height: auto;
+    width: auto;
+  }
+  .menu ul {
+    flex-direction: row;
+  }
+  .hamburger,
+.toggler {
+    display: none;
+  }
+}
+.menu {
+  background: rgb(223, 223, 216);
+  width: 0%;
+  height: 100vh;
+  position: absolute;
+  right: -80px;
+  top: 0;
+  /* APPLYING TRANSITION TO THE MENU :  */
+  transition: all 0.4s ease;
+}
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+  padding-left: 10px;
+  min-height: 200px;
+  visibility: hidden;
+}
+.menu a:hover {
+  color: orange;
+}
+
+/* WHEN THE TOGGLER IS CHECKED, CHANGE THE VISIBILITY TO VISIBLE :  */
+.toggler:checked ~ .menu > div > ul {
+  transition: visibility 0.4s ease;
+  transition-delay: 0.1s;
+  visibility: visible;
 }/*# sourceMappingURL=main.css.map */
