@@ -23,9 +23,17 @@ body {
   font-size: 1.6rem;
 }
 
+li {
+  list-style: none;
+}
+
 a {
   color: inherit
 }
+
+$primary-color: #f8bbd0 !default;
+$accent-color: #6a1b9a !default;
+$secondary-color: green !default;
 
 @function set-text-color($color) {
   @if lightness($color) > 70 {
