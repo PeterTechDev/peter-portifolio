@@ -6,35 +6,30 @@
   text-decoration: none;
 }
 
-// Cores do modo claro
+// TODO: Definir Cores do modo claro
 $color-primary: #007bff;
 $color-secondary: #6c757d;
 $color-success: #28a745;
 $color-info: #17a2b8;
 $color-warning: #ffc107;
 $color-danger: #dc3545;
+$color-text: black;
 
-$color-background: #f8f8f8;
 $color-highlight: #ff5e3a;
 $color-button: #ff5e3a;
 $color-button-hover: #db4a29;
 
-
-// Cores do modo escuro
-$color-dark-mode: true;
-$color-primary-dark: #003b6f;
-$color-secondary-dark: #5a5e62;
-$color-success-dark: #1d5e2a;
-$color-info-dark: #0f5e79;
-$color-warning-dark: #9a6700;
-$color-danger-dark: #720d1c;
-
-$color-background-dark: #1c1c1c;
-$color-highlight-dark: #ff5e3a;
-$color-button-dark: #ff5e3a;
-$color-button-hover-dark: #db4a29;
-
-
+// TODO: Definir Cores do modo escuro
+.dark-mode {
+  --color-primary: #003b6f;
+  --color-secondary: #5a5e62;
+  --color-success: #1d5e2a;
+  --color-info: #0f5e79;
+  --color-warning: #9a6700;
+  --color-danger: #720d1c;
+  background-color: #1c1c1c;
+  color: #f8f8f8;
+}
 
 html {
   /* 1rem iquals to 10px */
@@ -46,12 +41,12 @@ body {
   height: 100vh;
   font-family: "Source Sans Pro";
   text-rendering: optimizelegibility;
-  background-color: #f8f8f8;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
   font-size: 1.6rem;
+  color: $color-text;
 }
 
 li {
@@ -62,18 +57,17 @@ a {
   color: inherit
 }
 
-$primary-color: #f8bbd0 !default;
-$accent-color: #6a1b9a !default;
-$secondary-color: green !default;
 
-@function set-text-color($color) {
-  @if lightness($color) > 70 {
-    @return #333;
-  }
-  @else {
-    @return white;
-  }
+
+.dark-mode .btn {
+  background-color: var(--color-primary);
+  color: #fff;
 }
+
+.dark-mode a {
+  color: #fff;
+}
+
 
 /* Para evitar todo o BOOTSTRAP criei um sistema próprio de grid */
 /* Definindo as larguras das colunas */

@@ -43,8 +43,16 @@
 
 // DARK MODE BUTTOn
 
-const darkModeButton = document.querySelector('#darkmode-btn');
+const toggleSwitch = document.querySelector('#darkmode-btn');
 
-darkModeButton.addEventListener('click', function() {
-  console.log("aiaiiaiaia");
-});
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.body.classList.add('dark-mode');
+    console.log("Dark Mode activated");
+  } else {
+    document.body.classList.remove('dark-mode');
+    console.log("Dark Mode Deactivated");
+  }    
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
