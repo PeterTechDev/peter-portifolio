@@ -15,6 +15,14 @@
     rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" 
+  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" 
+  integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" 
+  crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
 
   <title>Peter Leite Souza Portifolio</title>
 </head>
@@ -23,7 +31,7 @@
   <header id="header-scroll" class="header small">
     <h1 class="header__title">PeterTechDev</h1>
     <nav class="header__nav">
-      <a class="header__link" href="#home" onclick=scrollToTop(500)>Início</a>
+      <a class="header__link" href="#home">Início</a>
       <a class="header__link" href="#projects">Projetos</a>
       <a class="header__link" href="#skills">Habilidades</a>
       <a class="header__link" href="#contact">Contato</a>
@@ -124,39 +132,39 @@
     </label>
   </div>
   <section id="home" class="about-me container">
-      <div class="about-me__text-column">
-        <h2>Olá, meu nome é <span class="highlight"> Peter</span> e eu sou <br> <span id="typed"
-            class="highlight">Programador</span> </h2>
-        <p class="about-me__text">
-          Sou um programador com experiência em desenvolvimento tanto no
-          frontend quanto no backend, apaixonado por criar soluções que
-          atendam às necessidades dos usuários e tornem suas vidas mais
-          fáceis. Com habilidades em metodologias ágeis e versionamento de
-          código, acredito que a colaboração e o trabalho em equipe são
-          essenciais para o sucesso de qualquer projeto.
-          <br />
-          <br />
-          Ao longo dos anos, aprendi a valorizar a importância da comunicação
-          clara e eficaz em todas as etapas do processo de desenvolvimento,
-          desde a concepção até a entrega final do produto. Sempre me esforço
-          para me manter atualizado com as últimas tendências e tecnologias do
-          mercado, para que possa trazer novas ideias e abordagens inovadoras
-          para a equipe.
-          <br />
-          <br />
-          Sou motivado por desafios e estou constantemente em busca de novos
-          conhecimentos e oportunidades para crescer pessoal e
-          profissionalmente. Estou entusiasmado para trabalhar com uma equipe
-          comprometida com a excelência e a criação de soluções que tornem a
-          vida dos usuários mais fácil e eficiente.
-        </p>
-        <a target="_blank" href="./assets/Peter-Souza-CV.pdf">
-          <button>
-            <i class="fa fa-download" aria-hidden="true"></i>
-            Baixar Curriculo
-          </button>
-        </a>
-      </div>
+    <div class="about-me__text-column">
+      <h2>Olá, meu nome é <span class="highlight"> Peter</span> e eu sou <br> <span id="typed"
+          class="highlight">Programador</span> </h2>
+      <p class="about-me__text">
+        Sou um programador com experiência em desenvolvimento tanto no
+        frontend quanto no backend, apaixonado por criar soluções que
+        atendam às necessidades dos usuários e tornem suas vidas mais
+        fáceis. Com habilidades em metodologias ágeis e versionamento de
+        código, acredito que a colaboração e o trabalho em equipe são
+        essenciais para o sucesso de qualquer projeto.
+        <br />
+        <br />
+        Ao longo dos anos, aprendi a valorizar a importância da comunicação
+        clara e eficaz em todas as etapas do processo de desenvolvimento,
+        desde a concepção até a entrega final do produto. Sempre me esforço
+        para me manter atualizado com as últimas tendências e tecnologias do
+        mercado, para que possa trazer novas ideias e abordagens inovadoras
+        para a equipe.
+        <br />
+        <br />
+        Sou motivado por desafios e estou constantemente em busca de novos
+        conhecimentos e oportunidades para crescer pessoal e
+        profissionalmente. Estou entusiasmado para trabalhar com uma equipe
+        comprometida com a excelência e a criação de soluções que tornem a
+        vida dos usuários mais fácil e eficiente.
+      </p>
+      <a target="_blank" href="./assets/Peter-Souza-CV.pdf">
+        <button>
+          <i class="fa fa-download" aria-hidden="true"></i>
+          Baixar Curriculo
+        </button>
+      </a>
+    </div>
     <div class="about-me__image-column col-md-6">
       <img class="about-me__profile-image" src="assets/images/peter-pic.jpg" alt="Foto de Peter" />
     </div>
@@ -536,11 +544,8 @@
       </div>
     </div>
   </footer>
-  <button id="scroll-to-top" class="upward" data-gw-scrollto="body">
-    <div class="upward__arrow"></div>
-  </button>
+  <a id="scroll-to-top"></a>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script type="module" src="script/main.js"></script>
+  <script type="module" src="./script/main.js"></script>
 </body>
-
 </html>

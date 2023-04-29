@@ -1,38 +1,21 @@
 const scrollToTopButton = document.getElementById('scroll-to-top');
 
-// Make the button appear when the user scrolls down 100
+// NEW
+// let scrollToTopButton = document.querySelector('#button');
+
 window.addEventListener('scroll', function() {
-  if (window.pageYOffset > 100) {
-    scrollToTopButton.classList.add('visible');
+  if (window.scrollY > 300) {
+    scrollToTopButton.classList.add('show');
   } else {
-    scrollToTopButton.classList.remove('visible');
+    scrollToTopButton.classList.remove('show');
   }
 });
-function blurInput(input) {
-  console.log(input);
-}
 
-// SCROLL TO TOP FUNCTION AND ANIMATION
-function scrollToTop(duration) {
-  var start = window.pageYOffset || document.documentElement.scrollTop;
-  var startTime = null;
+scrollToTopButton.addEventListener('click', scrollToTop)
 
-  function animateScroll(timestamp) {
-    if (!startTime) startTime = timestamp;
-    var progress = timestamp - startTime;
-    var scrollStep = Math.max(start - (progress / duration) * start, 0);
-
-    window.scrollTo(0, scrollStep);
-
-    if (progress < duration) {
-      window.requestAnimationFrame(animateScroll);
-    }
-  }
-
-  window.requestAnimationFrame(animateScroll);
-}
-
-scrollToTopButton.addEventListener('click', function(){
-  scrollToTop(500);
+function scrollToTop() {
   console.log("Scrolling to top");
-});
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+console.log("Scroll to top button loaded");
