@@ -16,6 +16,7 @@ $header-height: 300px;
 
 html,
 body {
+  transition: all 0.5s ease;
   position: relative;
   /* 1rem iquals to 10px */
   font-size: 62.5%;
