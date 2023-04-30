@@ -356,15 +356,13 @@ body.sticky-header .about-me {
   border-bottom: 1px solid rgba(136, 136, 136, 0.3333333333);
   margin-top: 0;
 }
-.projects .card ins {
-  text-decoration: none;
-}
 .projects .card .card__img-container {
   overflow: hidden;
   border-radius: 0.5rem;
   height: 250px;
   width: 100%;
   margin-bottom: 2rem;
+  position: relative;
 }
 .projects .card .card__img {
   width: 100%;
@@ -373,7 +371,8 @@ body.sticky-header .about-me {
      object-fit: cover;
 }
 .projects .card .card__description {
-  margin: 1rem 0 2rem 0;
+  margin: 0.5rem 0;
+  height: 100px;
 }
 .projects .card .card__links {
   margin: 1rem auto;
