@@ -655,6 +655,7 @@ footer .copy {
   position: fixed;
   right: 2%;
   z-index: 99;
+  top: 115px;
 }
 #darkmode-btn-container label {
   width: 100%;
