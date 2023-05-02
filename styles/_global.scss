@@ -1,3 +1,5 @@
+$header-height: 300px;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,12 +22,16 @@ body {
   height: 100vh;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  //   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  //   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif;
+
 }
+
+
 
 .bg-global{
   position: fixed;
@@ -33,10 +39,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -10;
-  h1{
-    font-size: 20rem;
-    filter: opacity(0.1);
-  }
+  margin-top: $header-height;
+  font-size: 7vw;
+  filter: opacity(0.1);
 }
 
 // TODO: Definir Cores do modo claro
@@ -66,10 +71,6 @@ $color-button-hover: #db4a29;
 
 //Resolution
 $container-hd-resolution: 1366px;
-
-
-
-
 
 body {
   font-size: 1.6rem;
