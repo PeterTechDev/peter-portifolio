@@ -1,9 +1,10 @@
 
-@import '_global';
+@import 'global';
 
 //Sections
 @import './sections/header';
 @import './sections/about-me';
+@import './sections/projects';
 
 // Components
 @import 'components/darkmode-btn';
