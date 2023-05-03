@@ -60,7 +60,16 @@ a {
   color: inherit
 }
 
+.container {
+  width: 95%;
+  max-width: $container-hd-resolution;
+  margin-left: auto;
+  margin-right: auto;
 
+  @media (min-width: 980px) {
+    width: 90%;
+  }
+}
 
 .dark-mode .btn {
   background-color: var(--color-primary);
@@ -72,7 +81,6 @@ a {
 .dark-mode a {
   color: #fff;
 }
-
 
 /* Para evitar todo o BOOTSTRAP criei um sistema próprio de grid */
 /* Definindo as larguras das colunas */
@@ -96,7 +104,7 @@ a {
 }
 
 /* Criando as classes para diferentes tamanhos de tela */
-@media (min-width: 768px) {
+@media (min-width: 980px) {
   .col-md-1 {
     width: 8.33%;
   }

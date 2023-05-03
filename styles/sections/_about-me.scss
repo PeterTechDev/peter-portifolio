@@ -3,9 +3,8 @@
   // height: 82vh;
   display: flex;
   justify-content: center;
-  width: 100%;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 980px) {
     height: 82vh;
   }
 
@@ -14,10 +13,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    max-width: $container-hd-resolution;
     
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 980px) {
       flex-direction: row;
       width: 100%;
     }
@@ -29,6 +26,9 @@
     // background-color: red;
     max-width: 600px;
 
+    @media only screen and (min-width: 980px) {
+      padding: 15px 50px;
+    }
 
     h2 {
       font-size: 2.5rem;
@@ -86,25 +86,24 @@
 
 .about-me__text {
   line-height: 1.5;
-  max-width: 800px;
+  // max-width: 800px;
   margin: 0 auto;
-  // padding: 15px 50px;
   text-align: left;
   font-weight: bold;
 
-  h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
+  // h2 {
+  //   font-size: 36px;
+  //   margin-bottom: 20px;
+  // }
 
-  p {
-    font-size: 18px;
-    margin-bottom: 20px;
+  // p {
+  //   font-size: 18px;
+  //   margin-bottom: 20px;
 
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
+  //   &:last-of-type {
+  //     margin-bottom: 0;
+  //   }
+  // }
 
   .highlight {
     color: #ff8c00;

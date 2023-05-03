@@ -31,7 +31,7 @@
       <nav>
         <ul>
           <li><a href="#home">Início</a></li>
-          <li><a href="#">Projetos</a></li>
+          <li><a href="#projects">Projetos</a></li>
           <li><a href="#">Skills</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
@@ -271,9 +271,9 @@
       </label>
     </div>
 
-    <section class="about-me" id="home">
+    <section class="about-me container" id="home">
       <div class="container">
-        <div class="about-me__text-column col-md-6">
+        <div class="about-me__text-column">
           <h2>Olá, eu sou<span class="highlight"> Peter</span></h2>
           <p class="about-me__text">
             Sou um programador com experiência em desenvolvimento tanto no
@@ -311,12 +311,14 @@
       </div>
     </section>
 
-    <section id="projects" class="projects">
-      <h2>Projetos</h2>
+    <section id="projects" class="projects container">
+      <h2 class="section-title">Projetos</h2>
       <p>Aqui estão alguns dos meus projetos:</p>
       <div class="project-cards">
         <div class="project-card">
-          <img src="assets/images/memory-game.png" alt="Capa de um jogo da memória">
+          <a target="_blank" href="https://petertechdev.github.io/jogo-da-memoria/">
+            <img src="assets/images/memory-game.png" alt="Capa de um jogo da memória">
+          </a>
           <h3>Jogo da memória Vingadores</h3>
           <p>Projeto com certo grau de complexidade pois foi necessário muitas funções no javascript para fazer funcionar as regras do jogo.</p>
           <div class="project-links">
@@ -330,16 +332,19 @@
           </div>
         </div>
         <div class="project-card">
-          <img src="https://via.placeholder.com/350x150" alt="Projeto 2">
-          <h3>Projeto 2</h3>
-          <p>Descrição breve do Projeto 2.</p>
+          <a target="_blank" href="https://petertechdev.github.io/Adivinhe-o-numero/">
+            <img src="assets/images/guess-the-number.png" alt="Printscreen do jogo Advinhe o número com o Bender do futurama">
+          </a>
+          <h3>Advinhe o número: Futurama</h3>
+          <p>Me diverti muito fazendo este projeto. Tentei simplicar o máximo possível a lógica pois utilizei bastante para mostrar a lógica para outrs estudantes de programação.</p>
           <div class="project-links">
-            <a href="#">Demo</a>
-            <a href="#">Repositório</a>
+            <a target="_blank" href="https://petertechdev.github.io/Adivinhe-o-numero/">Demo</a>
+            <a target="_blank" href="https://github.com/PeterTechDev/Adivinhe-o-numero">Repositório</a>
           </div>
           <div class="project-tags">
-            <span>React</span>
-            <span>Redux</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
           </div>
         </div>
         <div class="project-card">
