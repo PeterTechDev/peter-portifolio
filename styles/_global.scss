@@ -68,6 +68,7 @@ a {
 
   @media (min-width: 980px) {
     width: 90%;
+    height: 82vh;
   }
 }
 
@@ -75,8 +76,6 @@ a {
   background-color: var(--color-primary);
   color: #fff;
 }
-
-//test
 
 .dark-mode a {
   color: #fff;
