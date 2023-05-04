@@ -86,3 +86,44 @@ const typed = new Typed(typedElement, {
   // Define se a lista de palavras será repetida após ser exibida
   loop: true
 });
+
+// ATUAL SECTIONS INDICATOR
+window.addEventListener('load', function() {
+  var headerScroll = document.getElementById('header-scroll');
+  headerScroll.classList.remove('small');
+});
+
+window.addEventListener('scroll', function() {
+  var headerScroll = document.getElementById('header-scroll');
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > 1) {
+    headerScroll.classList.add('small');
+  } else {
+    headerScroll.classList.remove('small');
+  }
+});
+
+window.addEventListener('scroll', function() {
+  var sections = document.querySelectorAll('section');
+  var nav = document.querySelector('nav');
+  var navHeight = nav.offsetHeight;
+  var curPos = window.pageYOffset || document.documentElement.scrollTop;
+
+  sections.forEach(function(section) {
+    var top = section.offsetTop - navHeight;
+    var bottom = top + section.offsetHeight;
+
+    if (curPos >= top && curPos <= bottom) {
+      nav.querySelectorAll('a').forEach(function(a) {
+        a.classList.remove('active');
+      });
+      sections.forEach(function(sec) {
+        sec.classList.remove('active');
+      });
+
+      section.classList.add('active');
+      nav.querySelector('a[href="#' + section.getAttribute('id') + '"]').classList.add('active');
+    }
+  });
+});

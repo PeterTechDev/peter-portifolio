@@ -23,11 +23,10 @@
 </head>
 
 <body>
-  <div id="home"></div>
-  <header class="header">
+  <header id="header-scroll" class="header small">
     <h1 class="header__title">PeterTechDev</h1>
     <nav class="header__nav">
-      <a class="header__link" onclick=scrollToTop(500)>Início</a>
+      <a class="header__link" href="#home" onclick=scrollToTop(500)>Início</a>
       <a class="header__link" href="#projects">Projetos</a>
       <a class="header__link" href="#skills">Habilidades</a>
       <a class="header__link" href="#contact">Contato</a>
@@ -129,7 +128,7 @@
     </label>
   </div>
 
-  <section class="about-me container" >
+  <section id="home" class="about-me container" >
     <div class="about-me__text-column">
       <h2>Olá, meu nome é <span class="highlight"> Peter</span> e eu sou <br> <span id="typed"
           class="highlight">Programador</span> </h2>

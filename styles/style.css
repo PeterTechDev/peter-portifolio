@@ -197,8 +197,12 @@ body {
   text-decoration: none;
   border-radius: 2px;
 }
+.header__link.active {
+  border-bottom: 2px solid #85C2FF;
+}
 .header__link:hover {
   box-shadow: 0 0 0 1px #fff;
+  cursor: pointer;
 }
 
 /* Sticky Header Style */
