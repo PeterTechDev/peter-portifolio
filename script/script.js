@@ -105,14 +105,14 @@ window.addEventListener('scroll', function() {
 });
 
 window.addEventListener('scroll', function() {
-  var sections = document.querySelectorAll('section');
-  var nav = document.querySelector('nav');
-  var navHeight = nav.offsetHeight;
-  var curPos = window.pageYOffset || document.documentElement.scrollTop;
+  const sections = document.querySelectorAll('section');
+  const nav = document.querySelector('nav');
+  const navHeight = nav.offsetHeight;
+  const curPos = window.pageYOffset || document.documentElement.scrollTop;
 
   sections.forEach(function(section) {
-    var top = section.offsetTop - navHeight;
-    var bottom = top + section.offsetHeight;
+    const top = section.offsetTop - navHeight;
+    const bottom = top + section.offsetHeight;
 
     if (curPos >= top && curPos <= bottom) {
       nav.querySelectorAll('a').forEach(function(a) {
