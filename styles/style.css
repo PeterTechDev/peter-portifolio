@@ -152,6 +152,8 @@ header nav ul li a {
   padding: 50px 0;
   height: 82vh;
   display: flex;
+  justify-content: center;
+  width: 100%;
 }
 #about-me .container {
   display: flex;
@@ -159,13 +161,14 @@ header nav ul li a {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  width: 100%;
+  max-width: 1366px;
 }
 #about-me .container .row {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 @media (min-width: 768px) {
   #about-me .container .row {

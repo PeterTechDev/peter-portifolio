@@ -2,6 +2,8 @@
   padding: 50px 0;
   height: 82vh;
   display: flex;
+  justify-content: center;
+  width: 100%;
 
   .container {
     display: flex;
@@ -9,13 +11,15 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    width: 100%;
+    max-width: $container-hd-resolution;
+
 
     .row {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 100%;
 
       @media (min-width: 768px) {
         flex-direction: row;
