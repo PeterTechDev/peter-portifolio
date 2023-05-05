@@ -16,6 +16,7 @@ body {
   height: 100vh;
   font-family: "Source Sans Pro";
   text-rendering: optimizelegibility;
+  background-color: #f8f8f8;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -41,5 +42,48 @@ $secondary-color: green !default;
   }
   @else {
     @return white;
+  }
+}
+
+/* Para evitar todo o BOOTSTRAP criei um sistema próprio de grid */
+/* Definindo as larguras das colunas */
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-12 {
+  width: 100%;
+}
+
+/* Criando as classes para diferentes tamanhos de tela */
+@media (min-width: 768px) {
+  .col-md-1 {
+    width: 8.33%;
+  }
+  .col-md-2 {
+    width: 16.66%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.33%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-12 {
+    width: 100%;
   }
 }
