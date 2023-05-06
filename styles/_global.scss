@@ -72,8 +72,14 @@ a {
 
   @media (min-width: 980px) {
     width: 90%;
-    height: 82vh;
+    min-height: 82vh;
   }
+}
+
+.section-title {
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 5rem;
 }
 
 .dark-mode .btn {

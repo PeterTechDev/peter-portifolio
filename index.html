@@ -365,7 +365,7 @@
     </section>
     
     <section id="skills" class="skills container">
-      <h2>Skills</h2>
+      <h2 class="section-title">Skills</h2>
         <div class="skills-container">
           <div class="skill">
             <img src="assets/images/html.png" alt="HTML5">
@@ -414,7 +414,10 @@
         </div>
     </section>
     
-    <section id="contact" class="contact container">
+    <section id="contact" class=" container">  
+      <h2 class="section-title">Entre em contato</h2>
+
+      <div class="contact">
       <div class="social">
         <h2>Get in touch</h2>
         <ul>
@@ -436,13 +439,25 @@
         </ul>
       </div>
       
-      <div class="form">
-        <!-- Aqui vai o formulário -->
-      </div>
+      <form class="form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" placeholder="Digite sua mensagem aqui" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
     </section>
-    
-    
-    
 
   </body>
   <script src="script/script.js"></script>
