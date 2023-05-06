@@ -1,12 +1,12 @@
-$width: 80px;
-$height: 40px;
-$button-radius: 20px;
+$width: 60px;
+$height: 30px;
+$button-radius: 15px;
 
 #darkmode-btn-container {
   width: $width;
   height: $height;
   position: fixed;
-  right: 2% ;
+  right: 2%;
   z-index: 99;
 
   label {
@@ -19,7 +19,7 @@ $button-radius: 20px;
     box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.4), inset 0px -2px 6px rgba(255, 255, 255, 0.4);
     cursor: pointer;
     transition: 0.3s;
-  
+
     &:after {
       content: "";
       width: $width * 0.375;
@@ -32,24 +32,42 @@ $button-radius: 20px;
       box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.2);
       transition: 0.3s;
     }
+
+    svg {
+      position: absolute;
+      width: $width * 0.25;
+      z-index: 100;
+    }
+
+    svg.sun {
+      left: $button-radius * 0.5;
+      transition: 0.3s;
+      height: $height;
+    }
+
+    svg.moon {
+      right: $button-radius * .5;
+      transition: 0.3s;
+      height: $height;
+    }
   }
-  
+
   input {
     width: 0;
     height: 0;
     visibility: hidden;
   }
-  
+
   input:checked + label {
     background: #242424;
   }
-  
+
   input:checked + label:after {
     left: $width * .75;
     transform: translateX(-50%);
     background: linear-gradient(180deg, #777, #3a3a3a);
   }
-  
+
   label:active:after {
     width: $width * 0.5;
     height: $height * 0.75;
@@ -57,66 +75,36 @@ $button-radius: 20px;
     left: $button-radius * -0.1;
     transform: translate(25%);
   }
-  
-  label svg {
-    position: absolute;
-    width: $width * 0.25;
-    z-index: 100;
-  }
-  
-  label svg.sun {
-    left: $button-radius * 0.5;
-    transition: 0.3s;
-    height: $height;
-  }
-  
-  label svg.moon {
-    right: $button-radius * .5;
-    transition: 0.3s;
-    height: $height;
-  }
-  
-  input:checked label svg.sun {
-    fill: #7e7e7e;
-  }
-  
-  input:checked label svg.moon {
-    fill: #fff;
-  }
-  
-  // Adicionando regras para dispositivos móveis com tela menor que 600px
-  @media (max-width: 600px) {
-    #darkmode-btn-container {
-      width: 60px;
-      height: 30px;
-    }
-  
-    input:checked + label:after {
-      left: $width * .55;
-    }
-  
+
+  // Adicionando regras para dispositivos móveis com tela maior que 600px
+  @media (min-width: 601px) {
+    width: 60px;
+    height: 30px;
+
     label {
-      border-radius: 15px;
+      border-radius: $button-radius;
     }
-  
+
     label:after {
-      width: 20px;
-      height: 20px;
-      left: 8px;
+      width: $width * 0.375;
+      height: $height * 0.75;
+      left: $button-radius * 0.25;
     }
-  
-    label svg {
-      width: 16px;
+
+    input:checked + label:after {
+      left: $width * .75;
+      transform: translateX(-50%);
+      background: linear-gradient(180deg, #777, #3a3a3a);
     }
-  
-    label svg.sun {
-      left: 10px;
-      height: 30px;
+
+    svg.sun {
+      left: $button-radius * 0.5;
+      height: $height;
     }
-  
-    label svg.moon {
-      right: 8px;
-      height: 30px;
+
+    svg.moon {
+      right: $button-radius * .5;
+      height: $height;
     }
   }
 }

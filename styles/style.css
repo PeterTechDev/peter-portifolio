@@ -481,8 +481,8 @@ header nav ul li a {
 }
 
 #darkmode-btn-container {
-  width: 80px;
-  height: 40px;
+  width: 60px;
+  height: 30px;
   position: fixed;
   right: 2%;
   z-index: 99;
@@ -493,22 +493,37 @@ header nav ul li a {
   position: relative;
   display: block;
   background: #ebebeb;
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.4), inset 0px -2px 6px rgba(255, 255, 255, 0.4);
   cursor: pointer;
   transition: 0.3s;
 }
 #darkmode-btn-container label:after {
   content: "";
-  width: 30px;
-  height: 30px;
+  width: 22.5px;
+  height: 22.5px;
   position: absolute;
-  left: 5px;
-  top: 5px;
+  left: 3.75px;
+  top: 3.75px;
   background: linear-gradient(180deg, #ffcc89, #d8860b);
   border-radius: 50%;
   box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.2);
   transition: 0.3s;
+}
+#darkmode-btn-container label svg {
+  position: absolute;
+  width: 15px;
+  z-index: 100;
+}
+#darkmode-btn-container label svg.sun {
+  left: 7.5px;
+  transition: 0.3s;
+  height: 30px;
+}
+#darkmode-btn-container label svg.moon {
+  right: 7.5px;
+  transition: 0.3s;
+  height: 30px;
 }
 #darkmode-btn-container input {
   width: 0;
@@ -519,63 +534,41 @@ header nav ul li a {
   background: #242424;
 }
 #darkmode-btn-container input:checked + label:after {
-  left: 60px;
+  left: 45px;
   transform: translateX(-50%);
   background: linear-gradient(180deg, #777, #3a3a3a);
 }
 #darkmode-btn-container label:active:after {
-  width: 40px;
-  height: 30px;
-  top: 5px;
-  left: -2px;
+  width: 30px;
+  height: 22.5px;
+  top: 3.75px;
+  left: -1.5px;
   transform: translate(25%);
 }
-#darkmode-btn-container label svg {
-  position: absolute;
-  width: 20px;
-  z-index: 100;
-}
-#darkmode-btn-container label svg.sun {
-  left: 10px;
-  transition: 0.3s;
-  height: 40px;
-}
-#darkmode-btn-container label svg.moon {
-  right: 10px;
-  transition: 0.3s;
-  height: 40px;
-}
-#darkmode-btn-container input:checked label svg.sun {
-  fill: #7e7e7e;
-}
-#darkmode-btn-container input:checked label svg.moon {
-  fill: #fff;
-}
-@media (max-width: 600px) {
-  #darkmode-btn-container #darkmode-btn-container {
+@media (min-width: 601px) {
+  #darkmode-btn-container {
     width: 60px;
     height: 30px;
-  }
-  #darkmode-btn-container input:checked + label:after {
-    left: 44px;
   }
   #darkmode-btn-container label {
     border-radius: 15px;
   }
   #darkmode-btn-container label:after {
-    width: 20px;
-    height: 20px;
-    left: 8px;
+    width: 22.5px;
+    height: 22.5px;
+    left: 3.75px;
   }
-  #darkmode-btn-container label svg {
-    width: 16px;
+  #darkmode-btn-container input:checked + label:after {
+    left: 45px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
   }
-  #darkmode-btn-container label svg.sun {
-    left: 10px;
+  #darkmode-btn-container svg.sun {
+    left: 7.5px;
     height: 30px;
   }
-  #darkmode-btn-container label svg.moon {
-    right: 8px;
+  #darkmode-btn-container svg.moon {
+    right: 7.5px;
     height: 30px;
   }
 }
