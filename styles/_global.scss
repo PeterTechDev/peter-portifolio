@@ -70,6 +70,11 @@ a {
   margin-left: auto;
   margin-right: auto;
 
+  div {
+    width: 100%;
+    text-align: center;
+  }
+
   @media (min-width: 980px) {
     width: 90%;
     min-height: 82vh;
