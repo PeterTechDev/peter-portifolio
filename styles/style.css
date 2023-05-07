@@ -521,6 +521,54 @@ header nav ul li a {
   }
 }
 
+footer {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+footer .footer-content .logo {
+  margin-bottom: 20px;
+}
+footer .footer-content .logo img {
+  width: 80px;
+  height: 80px;
+}
+footer .footer-content .social-icons a {
+  margin-right: 20px;
+}
+footer .footer-content .social-icons a i {
+  font-size: 24px;
+}
+footer .copy {
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  footer .footer-content .logo {
+    margin-bottom: 0;
+  }
+  footer .footer-content .logo img {
+    width: 60px;
+    height: 60px;
+  }
+  footer .footer-content .social-icons a {
+    margin-right: 10px;
+  }
+  footer .footer-content .social-icons a i {
+    font-size: 20px;
+  }
+}
 #darkmode-btn-container {
   width: 60px;
   height: 30px;
