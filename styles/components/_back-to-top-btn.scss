@@ -1,0 +1,39 @@
+.back-to-top {
+  position: fixed;
+  bottom: 7rem;
+  right: 1rem;
+  background-color: #333333cf;
+  color: #fff;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  .arrow {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: solid $color-secondary;
+    border-width: 0 3px 3px 0;
+    transform: rotate(225deg);
+    transition: all 0.5s ease-in-out;
+    margin-top: 4px;
+  }
+
+  &:hover {
+    background-color: #312121;
+
+
+    .arrow {
+      transform: rotate(225deg) translate(2px, 2px);
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
