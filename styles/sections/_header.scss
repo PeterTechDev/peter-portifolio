@@ -7,10 +7,16 @@ header {
   .header-container {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     height: 100%;
     max-width: $container-hd-resolution;
     margin: 0 auto;
+
+  @media only screen and (min-width: 980px) {
+      flex-direction: row;
+
+    }
   }
 
   .logo {

@@ -12,7 +12,6 @@
   &__text-column {
     text-align: center;
     margin-bottom: 30px;
-    // background-color: red;
     max-width: 600px;
 
     @media only screen and (min-width: 980px) {
@@ -48,13 +47,16 @@
         background-color: $color-button-hover;
       }
     }
-  // }
-
 }
 
 &__image-column {
   text-align: center;
-  padding: 40px;
+  padding: 0;
+  
+  
+  @media only screen and (min-width: 1366px) {
+    padding: 40px;
+  }
 
   img {
     width: 100%;
@@ -77,24 +79,9 @@
 
 .about-me__text {
   line-height: 1.5;
-  // max-width: 800px;
   margin: 0 auto;
   text-align: left;
   font-weight: bold;
-
-  // h2 {
-  //   font-size: 36px;
-  //   margin-bottom: 20px;
-  // }
-
-  // p {
-  //   font-size: 18px;
-  //   margin-bottom: 20px;
-
-  //   &:last-of-type {
-  //     margin-bottom: 0;
-  //   }
-  // }
 
   .highlight {
     color: #ff8c00;
