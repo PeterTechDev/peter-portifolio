@@ -56,3 +56,28 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
+
+
+//typed
+
+// Seleciona o elemento que contém o texto
+const typedElement = document.getElementById('typed');
+
+// Inicializa a biblioteca Typed.js
+const typed = new Typed(typedElement, {
+  // Define as palavras que serão exibidas
+  strings: [
+    'Programador.',
+    'Desenvolvedor Web.',
+    'Apaixonado por tecnologia.',
+    'Paladino level 2.',
+    'Basqueteiro.',
+    'Trilheiro.',  
+  ],
+  // Define o tempo de digitação de cada palavra
+  typeSpeed: 70,
+  // Define o tempo de espera entre as palavras
+  backDelay: 2000,
+  // Define se a lista de palavras será repetida após ser exibida
+  loop: true
+});
