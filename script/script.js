@@ -1,59 +1,21 @@
-
-// const header = document.querySelector("header");
-
-
-// function sitckyHeader() { 
-//   let navOffset = header.offsetTop + 10;
-
-//   window.addEventListener("scroll", () => {
-//     (window.scrollY >= navOffset) ? header.classList.add("sticky") : header.classList.remove("sticky")
-//   });
-// }
-
-// function activeHamburger() {
-//   const hamburger = document.querySelector('.hamburger');
-//   const nav = document.querySelector('.header-links');
-//   const navLinks = document.querySelectorAll('.header-links li');
-
-//   hamburger.addEventListener("click", () => {
-//     nav.classList.toggle("hamburger-active");
-
-//     navLinks.forEach((link, index) => {
-//       if(link.style.animation) {
-//         link.style.animation = "";
-//       } else {
-//         link.style.animation = `linksFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-//       }
-//     });
-//     //Burger animation
-//     hamburger.classList.toggle("toggle");
-
-
-//   });
-// }
-
-
-// const app = ()=> {
-//   activeHamburger();
-//   sitckyHeader();
-// }
-
-// app();
-
-window.addEventListener('scroll', function() {
-  var header = document.getElementById('header');
-  var headerHeight = header.offsetHeight;
-  var scrollPosition = window.pageYOffset;
-
-  if (scrollPosition > headerHeight) {
-    header.classList.add('sticky');
-  } else {
-    header.classList.remove('sticky');
-  }
+// HEADER 
+document.addEventListener('DOMContentLoaded', function() {
+  window.addEventListener('scroll', function() {
+    var winTop = window.pageYOffset;
+    var body = document.querySelector('body');
+    if (winTop >= 30) {
+      body.classList.add('sticky-header');
+      
+    } else {
+      body.classList.remove('sticky-header');
+    }
+  });
 });
 
+// back to top button
 const scrollToTopButton = document.getElementById('backToTopBtn');
 
+// make button visible when scrolling
 window.addEventListener('scroll', function() {
   if (window.pageYOffset > 0) {
     scrollToTopButton.classList.add('visible');
@@ -62,17 +24,31 @@ window.addEventListener('scroll', function() {
   }
 });
 
-scrollToTopButton.addEventListener('click', function() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+// scroll to top animation
+function scrollToTop(duration) {
+  var start = window.pageYOffset || document.documentElement.scrollTop;
+  var startTime = null;
+
+  function animateScroll(timestamp) {
+    if (!startTime) startTime = timestamp;
+    var progress = timestamp - startTime;
+    var scrollStep = Math.max(start - (progress / duration) * start, 0);
+
+    window.scrollTo(0, scrollStep);
+
+    if (progress < duration) {
+      window.requestAnimationFrame(animateScroll);
+    }
+  }
+
+  window.requestAnimationFrame(animateScroll);
+}
+scrollToTopButton.addEventListener('click', function(){
+  scrollToTop(500);
+  console.log("Scrolling to top", window.pageYOffset);
 });
 
-
-
-// DARK MODE BUTTOn
-
+// DARK MODE BUTTON
 const toggleSwitch = document.querySelector('#darkmode-btn');
 
 function switchTheme(e) {
@@ -100,7 +76,6 @@ const typed = new Typed(typedElement, {
     'Programador.',
     'Desenvolvedor Web.',
     'Apaixonado por tecnologia.',
-    'Paladino level 2.',
     'Basqueteiro.',
     'Trilheiro.',  
   ],
