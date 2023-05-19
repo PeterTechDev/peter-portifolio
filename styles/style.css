@@ -160,6 +160,22 @@ header {
   padding: 2rem 5rem;
   background-color: #007bff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  transition: all 0.5s ease-out;
+}
+header.sticky {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(0deg, rgba(53, 104, 207, 0.491) 0%, rgba(195, 233, 199, 0.5019607843) 100%);
+  height: 5vh;
+}
+@keyframes fadeIn {
+  from {
+    height: 8vh;
+  }
+  to {
+    height: 6h;
+  }
 }
 header .header-container {
   display: flex;
@@ -740,6 +756,8 @@ footer .copy {
   justify-content: center;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 .back-to-top .arrow {
   display: block;
@@ -759,4 +777,16 @@ footer .copy {
 }
 .back-to-top:active {
   transform: scale(0.95);
+}
+.back-to-top.visible {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */

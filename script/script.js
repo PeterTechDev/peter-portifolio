@@ -40,6 +40,36 @@
 
 // app();
 
+window.addEventListener('scroll', function() {
+  var header = document.getElementById('header');
+  var headerHeight = header.offsetHeight;
+  var scrollPosition = window.pageYOffset;
+
+  if (scrollPosition > headerHeight) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+});
+
+const scrollToTopButton = document.getElementById('backToTopBtn');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 0) {
+    scrollToTopButton.classList.add('visible');
+  } else {
+    scrollToTopButton.classList.remove('visible');
+  }
+});
+
+scrollToTopButton.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+
 
 // DARK MODE BUTTOn
 
