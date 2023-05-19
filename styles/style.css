@@ -25,6 +25,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.bg-global {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+}
+.bg-global h1 {
+  font-size: 20rem;
+  filter: opacity(0.1);
+}
+
 .dark-mode {
   --color-primary: #003b6f;
   --color-secondary: #5a5e62;
@@ -304,62 +316,111 @@ header nav ul li a {
 }
 
 .projects {
-  margin-top: 2em;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
-.projects .project-cards {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1em;
+@media only screen and (min-width: 768px) {
+  .projects {
+    flex-direction: row;
+  }
 }
-.projects .project-card {
-  background-color: #007bff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1.5em;
-  border-radius: 10px;
+.projects code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.projects .card {
+  padding: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 90%;
+  max-width: 350px;
+  height: 550px;
+  margin: 5rem auto;
+  border: 1px solid rgba(255, 255, 255, 0.1333333333);
+  background-color: #282c34;
+  background: linear-gradient(0deg, rgba(84, 105, 147, 0.491) 0%, rgba(17, 0, 32, 0.5) 100%);
+  box-shadow: 0 7px 20px 5px rgba(0, 0, 0, 0.5333333333);
+  border-radius: 0.7rem;
   overflow: hidden;
+  transition: 0.5s all;
+  position: relative;
 }
-.projects .project-card img {
+.projects .card hr {
   width: 100%;
-  height: 330px;
-  margin-bottom: 1em;
-  border-radius: 10px;
+  border: none;
+  border-bottom: 1px solid rgba(136, 136, 136, 0.3333333333);
+  margin-top: 0;
 }
-.projects .project-card h3 {
-  margin-bottom: 0.5em;
-  font-size: 1.5em;
+.projects .card ins {
+  text-decoration: none;
 }
-.projects .project-card p {
-  margin-bottom: 1em;
+.projects .card .card__img-container {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  height: 250px;
+  width: 100%;
+  margin-bottom: 2rem;
 }
-.projects .project-card .project-links {
+.projects .card .card__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projects .card .card__description {
+  margin: 1rem 0 2rem 0;
+}
+.projects .card .card__links {
+  margin: 1rem auto;
   display: flex;
-  justify-content: center;
-  margin-bottom: 3rem;
+  align-items: center;
+  justify-content: space-evenly;
 }
-.projects .project-card .project-links a {
+.projects .card .card__link {
   display: inline-block;
-  background-color: #17a2b8;
-  padding: 0.5em 1em;
-  border-radius: 5px;
-  margin-right: 1em;
-  transition: all 0.2s ease-in-out;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(0deg, rgb(71, 166, 107) 0%, rgba(186, 204, 51, 0.5) 100%);
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.5s all;
 }
-.projects .project-card .project-links a:hover {
-  filter: brightness(85%);
+.projects .card .card__link:hover {
+  background-color: rgba(255, 255, 255, 0.2666666667);
+  color: #000000;
 }
-.projects .project-card .project-tags {
-  display: flex;
-  flex-wrap: wrap;
+.projects .card .card__tags {
+  bottom: 10px;
+  position: absolute;
 }
-.projects .project-card .project-tags span {
-  background-color: #17a2b8;
-  padding: 0.25em 0.5em;
-  font-size: 0.9em;
-  border-radius: 5px;
-  margin-right: 0.5em;
-  margin-bottom: 0.5em;
+.projects .card .card__tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(213, 185, 28, 0.3254901961);
+  border: 1px solid rgba(184, 230, 68, 0.3333333333);
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.projects .card ::before {
+  position: fixed;
+  content: "";
+  box-shadow: 0 0 100px 40px rgba(255, 255, 255, 0.031372549);
+  top: -10%;
+  left: -100%;
+  transform: rotate(-45deg);
+  height: 60rem;
+  transition: 0.7s all;
+}
+.projects .card:hover {
+  border: 1px solid rgba(255, 255, 255, 0.2666666667);
+  box-shadow: 0 7px 50px 10px rgba(0, 0, 0, 0.6666666667);
+  transform: scale(1.015);
+}
+.projects .card:hover ::before {
+  filter: brightness(0.5);
+  top: -100%;
+  left: 200%;
 }
 
 .skills {

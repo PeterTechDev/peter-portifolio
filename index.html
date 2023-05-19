@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/logo-p1.png">
+
 
     <link
       rel="stylesheet"
@@ -42,6 +44,9 @@
       </div>
     </header>
 
+    <div class="bg-global">
+      <h1 class="projects--title">PeterTechDev</h1>
+    </div>
     <div id="darkmode-btn-container">
       <!-- busquei os icons no https://www.svgrepo.com/ -->
       <input type="checkbox" id="darkmode-btn" />
@@ -313,57 +318,67 @@
         </div>
     </section>
 
-    <section id="projects" class="projects container">
+    <section class="container" id="projects">
       <h2 class="section-title">Projetos</h2>
-      <p>Aqui estão alguns dos meus projetos:</p>
-      <div class="project-cards">
-        <div class="project-card">
-          <a target="_blank" href="https://petertechdev.github.io/jogo-da-memoria/">
-            <img src="assets/images/memory-game.png" alt="Capa de um jogo da memória">
-          </a>
-          <h3>Jogo da memória Vingadores</h3>
-          <p>Projeto com certo grau de complexidade pois foi necessário muitas funções no javascript para fazer funcionar as regras do jogo.</p>
-          <div class="project-links">
-            <a target="_blank" href="https://petertechdev.github.io/jogo-da-memoria/">Demo</a>
-            <a target="_blank" href="https://github.com/PeterTechDev/jogo-da-memoria">Repositório</a>
+      <div class="projects">
+
+        <div class='card'>
+          <div class="card__img-container">
+            <a target="_blank" href="https://petertechdev.github.io/jogo-da-memoria/">
+              <img src="assets/images/memory-game.png" alt="Capa de um jogo da memória">
+            </a>
           </div>
-          <div class="project-tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
+          <h2>Jogo da memoria Avengers</h2>
+          <p class='card__description'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto consequatur tempore libero necessitatibus ut aliquid.</p>
+          <hr>
+          <div class="card__links">
+            <a target="_blank" class="card__link" href="https://petertechdev.github.io/Adivinhe-o-numero/">Demo</a>
+            <a target="_blank" class="card__link" href="https://github.com/PeterTechDev/Adivinhe-o-numero">Repositório</a>
           </div>
-        </div>
-        <div class="project-card">
-          <a target="_blank" href="https://petertechdev.github.io/Adivinhe-o-numero/">
-            <img src="assets/images/guess-the-number.png" alt="Printscreen do jogo Advinhe o número com o Bender do futurama">
-          </a>
-          <h3>Advinhe o número: Futurama</h3>
-          <p>Me diverti muito fazendo este projeto. Tentei simplicar o máximo possível a lógica pois utilizei bastante para mostrar a lógica para outrs estudantes de programação.</p>
-          <div class="project-links">
-            <a target="_blank" href="https://petertechdev.github.io/Adivinhe-o-numero/">Demo</a>
-            <a target="_blank" href="https://github.com/PeterTechDev/Adivinhe-o-numero">Repositório</a>
-          </div>
-          <div class="project-tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
+          <div class="card__tags">
+            <span class="card__tag">HTML</span>
+            <span class="card__tag" >CSS</span>
+            <span class="card__tag" >JavaScript</span>
           </div>
         </div>
-        <div class="project-card">
-          <img src="https://via.placeholder.com/350x150" alt="Projeto 3">
-          <h3>Projeto 3</h3>
-          <p>Descrição breve do Projeto 3.</p>
-          <div class="project-links">
-            <a href="#">Demo</a>
-            <a href="#">Repositório</a>
+        <div class='card'>
+          <div class="card__img-container">
+            <a target="_blank" href="https://todo-crud-98u0zgu6d-petertechdev.vercel.app/">
+              <img src="assets/images/todo.png" alt="Capa de um jogo da memória">
+            </a>
           </div>
-          <div class="project-tags">
-            <span>Node.js</span>
-            <span>Express</span>
-            <span>MongoDB</span>
+          <h2>Lista de Tarefas CRUD</h2>
+          <p class='card__description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
+          <hr>
+          <div class="card__links">
+            <a target="_blank" class="card__link" href="https://todo-crud-98u0zgu6d-petertechdev.vercel.app/">Demo</a>
+            <a target="_blank" class="card__link" href="https://github.com/PeterTechDev/todo-crud">Repositório</a>
+          </div>
+          <div class="card__tags">
+            <span class="card__tag">React</span>
+            <span class="card__tag" >Typescript</span>
+            <span class="card__tag" >JavaScript</span>
+          </div>
+        </div>
+        <div class='card'>
+          <div class="card__img-container">
+            <img class='card__img' src="./assets/images/guess-the-number.png" alt="Print jogo da memoria" />
+          </div>
+          <h2>Jogo da memoria Avengers</h2>
+          <p class='card__description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
+          <hr>
+          <div class="card__links">
+            <a target="_blank" class="card__link" href="https://petertechdev.github.io/Adivinhe-o-numero/">Demo</a>
+            <a target="_blank" class="card__link" href="https://github.com/PeterTechDev/Adivinhe-o-numero">Repositório</a>
+          </div>
+          <div class="card__tags">
+            <span class="card__tag">HTML</span>
+            <span class="card__tag" >CSS</span>
+            <span class="card__tag" >JavaScript</span>
           </div>
         </div>
       </div>
+
     </section>
     
     <section id="skills" class="skills container">

@@ -1,68 +1,126 @@
 .projects {
-  margin-top: 2em;
-  text-align: center;  
+  display: flex;
+  flex-direction: column;
 
-  .project-cards {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 1em;
+@media only screen and (min-width: 768px) {
+  flex-direction: row;
+}
+
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
   }
-
-  .project-card {
-    background-color: $color-primary;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1.5em;
-    border-radius: 10px;
+  
+  .card {
+    padding: 10px;
+    user-select:none;
+    width: 90%;
+    max-width: 350px;
+    height: 550px;
+    margin: 5rem auto;
+    border: 1px solid #ffffff22;
+    background-color: #282c34;
+    background: linear-gradient(0deg, rgba(84, 105, 147, 0.491) 0%, rgba(17,0,32,.5) 100%);
+    box-shadow: 0 7px 20px 5px #00000088;
+    border-radius: .7rem;
+    // backdrop-filter: blur(7px);
+    // -webkit-backdrop-filter: blur(7px);
     overflow: hidden;
+    transition: .5s all;
+    position: relative;
 
-    img {
+    // @media only screen and (min-width: 768px) {
+    //   width: 300px;
+    // }
+    hr{
       width: 100%;
-      height: 330px;
-      margin-bottom: 1em;
-      border-radius: 10px;
-
+      border: none;
+      border-bottom: 1px solid #88888855;
+      margin-top: 0;
     }
-
-    h3 {
-      margin-bottom: 0.5em;
-      font-size: 1.5em;
+    ins{
+      text-decoration: none;
     }
+    // .projects-main{
+    //   display: flex;
+    //   flex-direction: column;
+    //   width: 90%;
+    //   padding: 1rem;
+      .card__img-container {
+        overflow: hidden;
+        border-radius: .5rem;
+        height: 250px;
+        width: 100%;
+        margin-bottom: 2rem;
+      }
 
-    p {
-      margin-bottom: 1em;
-    }
-
-    .project-links {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 3rem;
-
-      a {
+      .card__img{
+        width: 100%;
+        height: 100%;
+        // border-radius: .5rem;
+        // max-width: 100%;
+        // height: 250px;
+        object-fit: cover;
+      }
+      .card__description{
+        margin: 1rem 0 2rem 0;
+        // color: ;
+      }
+      .card__links {
+        margin: 1rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .card__link {
         display: inline-block;
-        background-color: $color-info;
-        padding: 0.5em 1em;
-        border-radius: 5px;
-        margin-right: 1em;
-        transition: all 0.2s ease-in-out;
-        
-        &:hover {
-          filter: brightness(85%)
+        padding: .5rem 1rem;
+        border-radius: .5rem;
+        background: linear-gradient(0deg, rgb(71, 166, 107) 0%, rgba(186, 204, 51, 0.5) 100%);
+
+        color: #ffffff;
+        text-decoration: none;
+        transition: .5s all;
+        &:hover{
+          background-color: #ffffff44;
+          color: #000000;
         }
       }
+
+      .card__tags {
+        bottom: 10px;
+        position: absolute;
+
+      }    
+      .card__tag {
+        display: inline-block;
+        padding: .5rem 1rem;
+        border-radius: .5rem;
+        background-color: #d5b91c53;
+        border: 1px solid #b8e64455;
+        margin-right: .5rem;
+        margin-bottom: .5rem;
+      }
+    ::before{
+      position: fixed;
+      content: "";
+      box-shadow: 0 0 100px 40px #ffffff08;
+      top: -10%;
+      left: -100%;
+      transform: rotate(-45deg);
+      height: 60rem;
+      transition: .7s all;
     }
-
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-
-      span {
-        background-color: $color-info;
-        padding: 0.25em 0.5em;
-        font-size: 0.9em;
-        border-radius: 5px;
-        margin-right: 0.5em;
-        margin-bottom: 0.5em;
+    &:hover{
+      border: 1px solid #ffffff44;
+      box-shadow: 0 7px 50px 10px #000000aa;
+      transform: scale(1.015);
+      // filter: brightness(1);
+      ::before{
+        filter: brightness(.5);
+        top: -100%;
+        left: 200%;
       }
     }
   }
