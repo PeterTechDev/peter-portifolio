@@ -79,7 +79,6 @@ const typed = new Typed(typedElement, {
     'Basqueteiro.',
     'Trilheiro.',  
   ],
-  // Define o tempo de digitação de cada palavra
   typeSpeed: 70,
   // Define o tempo de espera entre as palavras
   backDelay: 2000,
