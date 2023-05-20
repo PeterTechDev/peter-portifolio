@@ -2,46 +2,39 @@
   display: flex;
   flex-direction: column;
   gap: 0 2rem;
-  // flex-wrap: wrap;
 
-@media only screen and (min-width: 768px) {
-  flex-direction: row;
-}
-
-
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-      monospace;
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
   }
   
   .card {
     padding: 10px;
-    user-select:none;
+    user-select: none;
     width: 90%;
     max-width: 350px;
     height: 550px;
     margin: 5rem auto;
     border: 1px solid #ffffff22;
     background-color: #282c34;
-    background: linear-gradient(0deg, rgba(84, 105, 147, 0.491) 0%, rgba(17,0,32,.5) 100%);
+    background: linear-gradient(0deg, rgba(84, 105, 147, 0.491) 0%, rgba(17, 0, 32, 0.5) 100%);
     box-shadow: 0 7px 20px 5px #00000088;
-    border-radius: .7rem;
+    border-radius: 0.7rem;
     // backdrop-filter: blur(7px);
     // -webkit-backdrop-filter: blur(7px);
     overflow: hidden;
-    transition: .5s all;
+    transition: 0.5s all;
     position: relative;
 
     // @media only screen and (min-width: 768px) {
     //   width: 300px;
     // }
-    hr{
+    hr {
       width: 100%;
       border: none;
       border-bottom: 1px solid #88888855;
       margin-top: 0;
     }
-    ins{
+    ins {
       text-decoration: none;
     }
     // .projects-main{
@@ -49,62 +42,61 @@
     //   flex-direction: column;
     //   width: 90%;
     //   padding: 1rem;
-      .card__img-container {
-        overflow: hidden;
-        border-radius: .5rem;
-        height: 250px;
-        width: 100%;
-        margin-bottom: 2rem;
-      }
+    .card__img-container {
+      overflow: hidden;
+      border-radius: 0.5rem;
+      height: 250px;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
 
-      .card__img{
-        width: 100%;
-        height: 100%;
-        // border-radius: .5rem;
-        // max-width: 100%;
-        // height: 250px;
-        object-fit: cover;
-      }
-      .card__description{
-        margin: 1rem 0 2rem 0;
-        // color: ;
-      }
-      .card__links {
-        margin: 1rem auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-      }
-      .card__link {
-        display: inline-block;
-        padding: .5rem 1rem;
-        border-radius: .5rem;
-        background: linear-gradient(0deg, rgb(71, 166, 107) 0%, rgba(186, 204, 51, 0.5) 100%);
+    .card__img {
+      width: 100%;
+      height: 100%;
+      // border-radius: .5rem;
+      // max-width: 100%;
+      // height: 250px;
+      object-fit: cover;
+    }
+    .card__description {
+      margin: 1rem 0 2rem 0;
+      // color: ;
+    }
+    .card__links {
+      margin: 1rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .card__link {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      background: linear-gradient(0deg, rgb(71, 166, 107) 0%, rgba(186, 204, 51, 0.5) 100%);
 
-        color: #ffffff;
-        text-decoration: none;
-        transition: .5s all;
-        &:hover{
-          background-color: #ffffff44;
-          color: #000000;
-        }
+      color: #ffffff;
+      text-decoration: none;
+      transition: 0.5s all;
+      &:hover {
+        background-color: #ffffff44;
+        color: #000000;
       }
+    }
 
-      .card__tags {
-        bottom: 10px;
-        position: absolute;
-
-      }    
-      .card__tag {
-        display: inline-block;
-        padding: .5rem 1rem;
-        border-radius: .5rem;
-        background-color: #d5b91c53;
-        border: 1px solid #b8e64455;
-        margin-right: .5rem;
-        margin-bottom: .5rem;
-      }
-    ::before{
+    .card__tags {
+      bottom: 10px;
+      position: absolute;
+    }
+    .card__tag {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      background-color: #d5b91c53;
+      border: 1px solid #b8e64455;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    ::before {
       position: fixed;
       content: "";
       box-shadow: 0 0 100px 40px #ffffff08;
@@ -112,15 +104,15 @@
       left: -100%;
       transform: rotate(-45deg);
       height: 60rem;
-      transition: .7s all;
+      transition: 0.7s all;
     }
-    &:hover{
+    &:hover {
       border: 1px solid #ffffff44;
       box-shadow: 0 7px 50px 10px #000000aa;
       transform: scale(1.015);
       // filter: brightness(1);
-      ::before{
-        filter: brightness(.5);
+      ::before {
+        filter: brightness(0.5);
         top: -100%;
         left: 200%;
       }

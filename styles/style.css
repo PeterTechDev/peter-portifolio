@@ -196,22 +196,24 @@ body {
   line-height: 1;
   text-decoration: none;
   border-radius: 2px;
+  transition: all 0.3s ease;
 }
 .header__link.active {
-  border-bottom: 2px solid #85C2FF;
+  border: 2px solid #85C2FF;
 }
 .header__link:hover {
-  box-shadow: 0 0 0 1px #fff;
+  box-shadow: 0 0 0 1px #85C2FF;
+  transform: scale(0.9);
   cursor: pointer;
 }
 
 /* Sticky Header Style */
 /* ---------------------------------------- */
-body.sticky-header header {
+body.sticky-header .header {
   height: 60px;
   background-color: rgba(52, 152, 219, 0.9);
 }
-body.sticky-header header h1 {
+body.sticky-header .header__title {
   transform: scale(0);
 }
 
@@ -329,9 +331,6 @@ body.sticky-header .about-me {
   .projects {
     flex-direction: row;
   }
-}
-.projects code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 .projects .card {
   padding: 10px;

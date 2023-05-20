@@ -46,13 +46,15 @@ body{
     line-height: 1;
     text-decoration: none;
     border-radius: 2px;
+		transition: all 0.3s ease;
 
 		&.active {
-			border-bottom: 2px solid #85C2FF;
+			border: 2px solid #85C2FF;
 		}
 
 		&:hover{
-			box-shadow: (0 0 0 1px #fff);
+			box-shadow: (0 0 0 1px #85C2FF);
+			transform: scale(0.9);
 			cursor: pointer;
 		}
   }
@@ -61,10 +63,11 @@ body{
 /* Sticky Header Style */	
 /* ---------------------------------------- */ 
 body.sticky-header{
-	header{
+	.header {
 		height: 60px;
 		background-color: rgba(52,152,219,.9);
-		h1{
+
+		&__title {
       transform: scale(0);
 		}
 	}
