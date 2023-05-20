@@ -126,3 +126,47 @@ window.addEventListener('scroll', function() {
     }
   });
 });
+
+// SWIPER
+const swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If you want to enable navigation buttons
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // If you want to enable scrollbars
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+
+  // If you want to enable pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  breakpoints: {
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1300: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1600: {
+      slidesPerView: 4,
+      spaceBetween: 5,
+    },
+  }
+});

@@ -1,7 +1,9 @@
+
 .projects {
   display: flex;
   flex-direction: column;
   gap: 0 2rem;
+  overflow: hidden;
 
   @media only screen and (min-width: 768px) {
     flex-direction: row;
@@ -11,13 +13,14 @@
     padding: 10px;
     user-select: none;
     width: 90%;
+    min-width: 300px;
     max-width: 350px;
     height: 550px;
     margin: 5rem auto;
     border: 1px solid #ffffff22;
     background-color: #282c34;
     background: linear-gradient(0deg, rgba(84, 105, 147, 0.491) 0%, rgba(17, 0, 32, 0.5) 100%);
-    box-shadow: 0 7px 20px 5px #00000088;
+    box-shadow: 0 7px 12px 5px #00000088;
     border-radius: 0.7rem;
     overflow: hidden;
     transition: 0.5s all;
@@ -100,7 +103,7 @@
 
     &:hover {
       border: 1px solid #ffffff44;
-      box-shadow: 0 7px 50px 10px #000000aa;
+      box-shadow: 0 7px 20px 10px #000000aa;
       transform: scale(1.015);
       ::before {
         filter: brightness(0.5);
@@ -108,5 +111,8 @@
         left: 200%;
       }
     }
+  }
+
+  .swiper-pagination {
   }
 }

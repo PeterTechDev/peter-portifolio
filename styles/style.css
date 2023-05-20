@@ -15,6 +15,7 @@
 
 html,
 body {
+  transition: all 0.5s ease;
   position: relative;
   /* 1rem iquals to 10px */
   font-size: 62.5%;
@@ -156,10 +157,6 @@ a {
     width: 100%;
   }
 }
-body {
-  transition: all 0.5s ease;
-}
-
 .header {
   width: 100%;
   height: 300px;
@@ -326,6 +323,7 @@ body.sticky-header .about-me {
   display: flex;
   flex-direction: column;
   gap: 0 2rem;
+  overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
   .projects {
@@ -338,13 +336,14 @@ body.sticky-header .about-me {
      -moz-user-select: none;
           user-select: none;
   width: 90%;
+  min-width: 300px;
   max-width: 350px;
   height: 550px;
   margin: 5rem auto;
   border: 1px solid rgba(255, 255, 255, 0.1333333333);
   background-color: #282c34;
   background: linear-gradient(0deg, rgba(84, 105, 147, 0.491) 0%, rgba(17, 0, 32, 0.5) 100%);
-  box-shadow: 0 7px 20px 5px rgba(0, 0, 0, 0.5333333333);
+  box-shadow: 0 7px 12px 5px rgba(0, 0, 0, 0.5333333333);
   border-radius: 0.7rem;
   overflow: hidden;
   transition: 0.5s all;
@@ -418,7 +417,7 @@ body.sticky-header .about-me {
 }
 .projects .card:hover {
   border: 1px solid rgba(255, 255, 255, 0.2666666667);
-  box-shadow: 0 7px 50px 10px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: 0 7px 20px 10px rgba(0, 0, 0, 0.6666666667);
   transform: scale(1.015);
 }
 .projects .card:hover ::before {
@@ -426,7 +425,6 @@ body.sticky-header .about-me {
   top: -100%;
   left: 200%;
 }
-
 .skills {
   display: flex;
   flex-direction: column;
