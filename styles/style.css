@@ -28,6 +28,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 section {
   min-height: 80vh;
 }
@@ -427,6 +431,11 @@ body.sticky-header .about-me {
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
+}
+.skills__stacks {
+  width: 100%;
+  padding: 20px 0;
+  text-align: left;
 }
 .skills .skills-container {
   display: flex;

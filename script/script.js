@@ -1,4 +1,4 @@
-// HEADER 
+// HEADER SCROLL
 document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', function() {
     var winTop = window.pageYOffset;
@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+console.log("Alo");
 
 // back to top button
 const scrollToTopButton = document.getElementById('backToTopBtn');
@@ -127,21 +129,17 @@ window.addEventListener('scroll', function() {
   });
 });
 
+
 // SWIPER
 const swiper = new Swiper('.swiper-container', {
   // Optional parameters
   direction: 'horizontal',
-  // loop: true,
+  loop: true,
 
   // If you want to enable navigation buttons
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
-  },
-
-  // If you want to enable scrollbars
-  scrollbar: {
-    el: '.swiper-scrollbar',
   },
 
   // If you want to enable pagination
@@ -169,4 +167,18 @@ const swiper = new Swiper('.swiper-container', {
       spaceBetween: 5,
     },
   }
+});
+
+// SKILLS READ MORE
+document.querySelectorAll('.read-more').forEach(function(button) {
+  button.addEventListener('click', function() {
+      const description = this.previousElementSibling;
+      if (description.classList.contains('hidden')) {
+          description.classList.remove('hidden');
+          this.textContent = 'Menos';
+      } else {
+          description.classList.add('hidden');
+          this.textContent = 'Mais';
+      }
+  });
 });
