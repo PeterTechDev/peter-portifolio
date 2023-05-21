@@ -134,7 +134,7 @@ window.addEventListener('scroll', function() {
 const swiper = new Swiper('.swiper-container', {
   // Optional parameters
   direction: 'horizontal',
-  loop: true,
+  // loop: true,
 
   // If you want to enable navigation buttons
   navigation: {
