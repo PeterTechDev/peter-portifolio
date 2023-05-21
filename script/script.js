@@ -77,7 +77,7 @@ const typed = new Typed(typedElement, {
     'Desenvolvedor Web.',
     'Apaixonado por tecnologia.',
     'Basqueteiro.',
-    'Trilheiro.',  
+    'Resolvedor de problemas.',  
   ],
   typeSpeed: 70,
   // Define o tempo de espera entre as palavras
