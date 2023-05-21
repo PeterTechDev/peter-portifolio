@@ -6,9 +6,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 0;
+  z-index: 100;
   cursor: pointer;
-  transition: .3s all;
+  transition: 0.3s all;
 
   position: fixed;
   bottom: 9rem;
@@ -17,7 +17,7 @@
   height: 3.5rem;
   opacity: 0;
 
-  &.visible{
+  &.visible {
     opacity: 1;
   }
 
@@ -35,7 +35,6 @@
   }
 }
 
-
 .upward:after {
   content: "";
   display: block;
@@ -47,9 +46,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  z-index: -1;
   pointer-events: none;
-  transition: .3s all;
+  transition: 0.3s all;
 }
 
 .upward__arrow {
@@ -58,7 +56,6 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 5;
 }
 
 .upward__arrow:after {
@@ -71,8 +68,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
-  transition: .3s all;
+  transition: 0.3s all;
   opacity: 1;
 }
 
@@ -86,8 +82,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
-  transition: .3s all;
+  transition: 0.3s all;
   opacity: 0;
 }
 

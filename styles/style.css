@@ -34,6 +34,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -10;
+  max-width: 1920px;
   margin-top: 300px;
   font-size: 7vw;
   filter: opacity(0.1);
@@ -68,15 +69,6 @@ a {
   max-width: 1366px;
   margin-left: auto;
   margin-right: auto;
-}
-.container div {
-  width: 100%;
-}
-@media (min-width: 980px) {
-  .container {
-    width: 90%;
-    min-height: 82vh;
-  }
 }
 
 .section-title {
@@ -189,7 +181,7 @@ a {
 .header__link {
   color: #fff;
   display: inline-block;
-  padding: 10px 15px;
+  padding: 10px;
   line-height: 1;
   text-decoration: none;
   border-radius: 2px;
@@ -324,6 +316,7 @@ body.sticky-header .about-me {
   flex-direction: column;
   gap: 0 2rem;
   overflow: hidden;
+  position: relative;
 }
 @media only screen and (min-width: 768px) {
   .projects {
@@ -417,7 +410,7 @@ body.sticky-header .about-me {
 }
 .projects .card:hover {
   border: 1px solid rgba(255, 255, 255, 0.2666666667);
-  box-shadow: 0 7px 20px 10px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: 2px 5px 5px 5px rgba(131, 131, 131, 0.4078431373);
   transform: scale(1.015);
 }
 .projects .card:hover ::before {
@@ -737,7 +730,7 @@ footer .copy {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 0;
+  z-index: 100;
   cursor: pointer;
   transition: 0.3s all;
   position: fixed;
@@ -773,7 +766,6 @@ footer .copy {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  z-index: -1;
   pointer-events: none;
   transition: 0.3s all;
 }
@@ -784,7 +776,6 @@ footer .copy {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 5;
 }
 
 .upward__arrow:after {
@@ -797,7 +788,6 @@ footer .copy {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
   transition: 0.3s all;
   opacity: 1;
 }
@@ -812,7 +802,6 @@ footer .copy {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
   transition: 0.3s all;
   opacity: 0;
 }

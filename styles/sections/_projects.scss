@@ -4,6 +4,7 @@
   flex-direction: column;
   gap: 0 2rem;
   overflow: hidden;
+  position: relative;
 
   @media only screen and (min-width: 768px) {
     flex-direction: row;
@@ -103,7 +104,7 @@
 
     &:hover {
       border: 1px solid #ffffff44;
-      box-shadow: 0 7px 20px 10px #000000aa;
+      box-shadow: 2px 5px 5px 5px #83838368;
       transform: scale(1.015);
       ::before {
         filter: brightness(0.5);
@@ -113,6 +114,9 @@
     }
   }
 
-  .swiper-pagination {
+  .swiper-button-prev {
   }
+  .swiper-button-next {
+
+  } 
 }
