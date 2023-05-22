@@ -65,17 +65,14 @@
     max-width: 800px;
     height: auto;
     border-radius: 10px;
+
+    
   }
 }
 
   &__profile-image {
     background-color: $color-highlight;
-
-    &:hover {
-      transform: scale(1.1) rotate(4deg);
-      transition: all 0.5s ease-in-out;
-      cursor: pointer;
-    }
+    animation: animate 3s linear infinite;
   }
 }
 
@@ -117,4 +114,18 @@ body.sticky-header{
 	.about-me {
 		margin-top: 180px;
 	}
+}
+
+@keyframes animate{
+  0%{
+      transform: translate(-11px, 0);
+  }
+
+  50%{
+      transform: translate(-0px, -11px);
+  }
+
+  100%{
+      transform: translate(-11px, 0);
+  }
 }

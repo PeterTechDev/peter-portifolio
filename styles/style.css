@@ -280,11 +280,7 @@ body.sticky-header .header__title {
 }
 .about-me__profile-image {
   background-color: #ff5e3a;
-}
-.about-me__profile-image:hover {
-  transform: scale(1.1) rotate(4deg);
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
+  animation: animate 3s linear infinite;
 }
 
 .about-me__text {
@@ -319,6 +315,17 @@ body.sticky-header .about-me {
   margin-top: 180px;
 }
 
+@keyframes animate {
+  0% {
+    transform: translate(-11px, 0);
+  }
+  50% {
+    transform: translate(0px, -11px);
+  }
+  100% {
+    transform: translate(-11px, 0);
+  }
+}
 .projects {
   display: flex;
   flex-direction: column;
