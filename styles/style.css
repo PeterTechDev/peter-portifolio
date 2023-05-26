@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 .light-theme {
   --color-primary: #70D6FF;
@@ -49,6 +50,15 @@ body {
 
 section {
   min-height: 80vh;
+  position: relative;
+}
+
+section::before {
+  content: "";
+  display: block;
+  height: 100px; /* Altura do seu cabeçalho */
+  margin-top: -100px; /* Altura negativa do seu cabeçalho */
+  visibility: hidden;
 }
 
 .bg-global {

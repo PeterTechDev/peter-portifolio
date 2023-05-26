@@ -83,8 +83,19 @@ body {
   display: none;
 }
 
+
 section {
   min-height: 80vh;
+  position: relative;
+}
+
+// Resolve o problema da ancoragem do cabeçalho
+section::before {
+  content: '';
+  display: block;
+  height: 100px;  /* Altura do seu cabeçalho */
+  margin-top: -100px;  /* Altura negativa do seu cabeçalho */
+  visibility: hidden;
 }
 
 .bg-global{
@@ -107,6 +118,8 @@ section {
   margin-top: 10vh;
 
 }
+
+
 
 // _typography.scss
 body {
