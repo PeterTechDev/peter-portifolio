@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 .light-theme {
   --color-primary: #70D6FF;
@@ -36,12 +35,22 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 
+a {
+  color: var(--color-text);
+  font-family: inherit;
+}
+
+li {
+  list-style: none;
+}
+
 body {
   transition: all 0.5s ease;
   position: relative;
   height: 100%;
   font-size: 1.6rem;
-  color: black;
+  background: var(--background-color);
+  color: var(--color-text);
 }
 
 .hidden {
@@ -56,21 +65,14 @@ section {
 section::before {
   content: "";
   display: block;
-  height: 100px; /* Altura do seu cabeçalho */
-  margin-top: -100px; /* Altura negativa do seu cabeçalho */
+  height: 60px;
+  margin-top: -100px;
   visibility: hidden;
 }
-
-.bg-global {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -10;
-  max-width: 1920px;
-  margin-top: 300px;
-  font-size: 7vw;
-  filter: opacity(0.1);
+@media (min-width: 768px) {
+  section::before {
+    height: 170px;
+  }
 }
 
 .container {
@@ -80,26 +82,29 @@ section::before {
   margin-top: 10vh;
 }
 
-body {
-  background: var(--background-color);
-  color: var(--color-text);
-}
-
-a {
-  color: var(--color-text);
-  font-family: inherit;
-}
-
-li {
-  list-style: none;
+.bg-global {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+  max-width: 1920px;
+  margin-top: 250px;
+  font-size: 7vw;
+  filter: opacity(0.1);
 }
 
 .section-title {
   width: 100%;
   text-align: center;
   font-size: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   position: relative;
+}
+@media only screen and (min-width: 768px) {
+  .section-title {
+    margin-bottom: 5rem;
+  }
 }
 .section-title::after {
   content: "";
@@ -131,7 +136,7 @@ body.dark-mode {
 
 .header {
   width: 100%;
-  height: 300px;
+  height: 250px;
   background-color: var(--color-primary);
   text-align: center;
   position: fixed;
@@ -201,6 +206,7 @@ body.sticky-header .header__title {
 @media only screen and (min-width: 980px) {
   .about-me {
     flex-direction: row;
+    margin-top: 250px;
   }
 }
 .about-me__text-column {

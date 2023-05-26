@@ -1,30 +1,18 @@
 // _variables.scss
-$header-height: 300px;
+$header-height: 250px;
 $font-size: 8rem;
 $font-size-mobile: $font-size - 3rem;
 $container-hd-resolution: 1366px;
 
 // _colors.scss
-$color-primary: #f50000;
-$color-secondary: #00BBF9;
-
-$color-success: #001eff;
-$color-info: #17a2b8;
-$color-warning: #FEE440;
-$color-danger: #dc3545;
-$color-text: black;
-
-$color-button: #F15BB5;
-$color-button-hover: #bd227f;
-
-// _colors.scss
+//LIGHT THEME
 $color-primary-light: #70D6FF;
 $color-secondary-light: #6c757d;
 $color-background-light: #ffffff;
 $color-text-light: #000000;
 $color-highlight-light: #9B5DE5;
 
-
+//DARK THEME
 $color-primary-dark: #065c6c;
 $color-secondary-dark: #5a5e62;
 $color-background-dark: #1c1c1c;
@@ -70,19 +58,29 @@ html {
   font-family: 'Montserrat', sans-serif;
 }
 
+a {
+  color: var(--color-text);
+  font-family: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+// _layout.scss
 body {
   transition: all 0.5s ease;
   position: relative;
   height: 100%;
   font-size: 1.6rem;
-  color: $color-text;
+
+  background: var(--background-color);
+  color: var(--color-text);
 }
 
-// _layout.scss
 .hidden {
   display: none;
 }
-
 
 section {
   min-height: 80vh;
@@ -93,11 +91,23 @@ section {
 section::before {
   content: '';
   display: block;
-  height: 100px;  /* Altura do seu cabeçalho */
-  margin-top: -100px;  /* Altura negativa do seu cabeçalho */
+  height: 60px;
+  margin-top: -100px;
   visibility: hidden;
+
+  @media (min-width: 768px) {
+    height: 170px;
+  }
 }
 
+.container {
+  width: 95%;
+  max-width: $container-hd-resolution;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+// Paralax effect
 .bg-global{
   position: fixed;
   top: 50%;
@@ -110,38 +120,16 @@ section::before {
   filter: opacity(0.1);
 }
 
-// _container.scss
-.container {
-  width: 95%;
-  max-width: $container-hd-resolution;
-  margin: 0 auto;
-  margin-top: 10vh;
-
-}
-
-
-
-// _typography.scss
-body {
-  background: var(--background-color);
-  color: var(--color-text);
-}
-
-a {
-  color: var(--color-text);
-  font-family: inherit;
-}
-
-li {
-  list-style: none;
-}
-
 .section-title {
   width: 100%;
   text-align: center;
   font-size: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   position: relative;
+  
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 5rem;
+  }
 
   &::after {
     content: '';
