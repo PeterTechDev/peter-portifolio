@@ -325,6 +325,8 @@ body.sticky-header .about-me {
   gap: 0 2rem;
   overflow: hidden;
   position: relative;
+  /* Isso muda a cor das setas */
+  /* NAV SWIPER */
 }
 @media only screen and (min-width: 768px) {
   .projects {
@@ -407,11 +409,12 @@ body.sticky-header .about-me {
   position: fixed;
   content: "";
   box-shadow: 0 0 100px 40px rgba(255, 255, 255, 0.031372549);
-  top: -10%;
+  top: 100%;
   left: -100%;
   transform: rotate(-45deg);
-  height: 60rem;
+  height: 200rem;
   transition: 0.7s all;
+  opacity: 0;
 }
 .projects .card:hover {
   border: 1px solid rgba(255, 255, 255, 0.2666666667);
@@ -420,9 +423,30 @@ body.sticky-header .about-me {
 }
 .projects .card:hover ::before {
   filter: brightness(0.5);
-  top: -100%;
+  top: -150%;
   left: 200%;
+  opacity: 1;
 }
+.projects .swiper-button-next,
+.projects .swiper-button-prev {
+  color: #00F5D4;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: var(--color-text);
+  background-color: var(--color-highlight);
+  padding: 10px 20px;
+  border-radius: 150px;
+}
+
+.swiper-button-next {
+  transition: all 0.3s ease-in-out;
+}
+.swiper-button-next:hover {
+  transform: translateX(5px);
+}
+
 .skills {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -871,8 +895,8 @@ footer .copy {
 #scroll-to-top {
   display: inline-block;
   background-color: var(--color-highlight);
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   text-align: center;
   border-radius: 4px;
   position: fixed;
@@ -890,7 +914,7 @@ footer .copy {
   font-weight: normal;
   font-style: normal;
   font-size: 2em;
-  line-height: 50px;
+  line-height: 35px;
   color: var(--color-text);
 }
 

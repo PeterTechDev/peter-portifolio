@@ -95,11 +95,12 @@
       position: fixed;
       content: "";
       box-shadow: 0 0 100px 40px #ffffff08;
-      top: -10%;
+      top: 100%;
       left: -100%;
       transform: rotate(-45deg);
-      height: 60rem;
+      height: 200rem;
       transition: 0.7s all;
+      opacity: 0;
     }
 
     &:hover {
@@ -108,15 +109,41 @@
       transform: scale(1.015);
       ::before {
         filter: brightness(0.5);
-        top: -100%;
+        top: -150%;
         left: 200%;
+        opacity: 1;
       }
     }
   }
 
-  .swiper-button-prev {
-  }
-  .swiper-button-next {
 
-  } 
+/* Isso muda a cor das setas */
+.swiper-button-next, 
+.swiper-button-prev {
+  color: #00F5D4;
 }
+
+/* NAV SWIPER */
+}
+.swiper-button-next::after, 
+.swiper-button-prev::after {
+  color: var(--color-text);
+  background-color: var(--color-highlight);
+  padding: 10px 20px;
+  border-radius: 150px;
+  // margin-top: -40px;
+}
+
+.swiper-button-next {
+  transition: all 0.3s ease-in-out;
+
+    &::after {
+      // margin-left: 90px;
+      // margin-right: 20px;
+      // position: relative;
+    }
+
+    &:hover {
+      transform: translateX(5px);
+    }
+  }
