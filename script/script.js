@@ -25,6 +25,9 @@ window.addEventListener('scroll', function() {
     scrollToTopButton.classList.remove('visible');
   }
 });
+function blurInput(input) {
+  console.log(input);
+}
 
 // scroll to top animation
 function scrollToTop(duration) {

@@ -498,6 +498,7 @@ main {
   background: #fff;
   box-shadow: 3px 3px 25px 6px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
+  display: flex;
 }
 
 .form {
@@ -551,11 +552,11 @@ label input::placeholder {
 label:last-child {
   grid-column: 1/3;
 }
-label:focus-within {
+label:focus-within, label.active {
   color: var(--purple);
   border-bottom: 1px solid var(--purple);
 }
-label:focus-within::after {
+label:focus-within::after, label label.active {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -570,6 +571,85 @@ label::after {
   width: 100%;
   height: 2px;
   background: var(--purple);
+}
+
+.form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 400px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--purple);
+  border-radius: 8px;
+  border: 0;
+  transition: all 0.4s;
+}
+
+.form button svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+}
+
+.form button:hover {
+  background: var(--purple-light);
+  filter: brightness(0.9);
+  cursor: pointer;
+  transform: scale(0.98);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  background: var(--text);
+  padding: 60px;
+  color: var(--white);
+}
+
+.contact h1 {
+  font-size: 24px;
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.contact__info > div {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.contact__info > div svg {
+  width: 18px;
+  height: 18px;
+}
+
+.contact__info > div svg path {
+  fill: var(--silver);
+}
+
+.contact__socials {
+  display: flex;
+  column-gap: 32px;
+}
+
+.contact__socials svg {
+  width: 32px;
+  height: 32px;
+  color: var(--purple);
+  transition: all 0.4s;
+}
+.contact__socials svg:hover {
+  transform: scale(1.2);
+  color: var(--purple-light);
+  cursor: pointer;
 }
 
 footer {
