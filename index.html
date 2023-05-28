@@ -396,95 +396,94 @@
   <section id="contact" class=" container">
     <h2 class="section-title">Entre em contato</h2>
 
-    <div class="contact-section">
-      <div id="app">
-        <main>
-          <form action="" class="form">
-            <h1>
-              Entre em contato
-              <svg stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#3e3e3e"
-                  d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
-                </path>
-              </svg>
-            </h1>
+    <div class="contact">
+      <form class="contact__form">
+        <h1 class="contact__form-title">
+          Entre em contato
+          <svg class="contact__form-icon" stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#3e3e3e"
+              d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
+            </path>
+          </svg>
+        </h1>
 
-            <div class="form__inputs">
-              <!-- TODO: Encontrar outra forma de inserir este script de validação dos campos -->
-              <script>
-                function blurInput(input) {
-                  const idLabel = "label-" + input.name;
-                  const isValue = input.value != "";
+        <div class="contact__form-inputs">
+          <!-- TODO: Encontrar outra forma de inserir este script de validação dos campos -->
+          <script>
+            function blurInput(input) {
+              const idLabel = "label-" + input.name;
+              const isValue = input.value != "";
 
-                  const label = document.getElementById(idLabel);
-                  label.classList = isValue ? "active" : "";
-                }
-              </script>
-              <label id="label-name">
-                Nome Completo
-                <input type="text" name="name" placeholder="Digite seu nome" onblur="blurInput(this)">
-              </label>
-
-              <label id="label-email">
-                Email
-                <input type="text" name="email" placeholder="Digite seu email" onblur="blurInput(this)" />
-              </label>
-              <label id="label-phone">
-                Telefone
-                <input type="text" name="phone" placeholder="Digite seu telefone" onblur="blurInput(this)" />
-              </label>
-              <label id="label-company">
-                Nome da empresa
-                <input type="text" name="company" placeholder="Digite nome da empresa" onblur="blurInput(this)" />
-              </label>
-              <label id="label-message">
-                Mensagem
-                <input type="text" name="message" placeholder="Digite sua mensagem" onblur="blurInput(this)" />
-              </label>
-            </div>
-            <button type="submit">
-              Enviar
-              <svg stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#EDF1F7"
-                  d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z">
-                </path>
-              </svg>
-            </button>
-          </form>
-          <div class="contact">
-            <h1>
-              Informações de contato
-            </h1>
-            <div class="contact__info">
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                  <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
-                </svg>
-              <div>
-                <p>Av Republica</p>
-                <p>Interlagos</p>
-                <p>Linhares/ES</p>
-              </div>
-              </div>
+              const label = document.getElementById(idLabel);
+              label.classList = isValue ? "active" : "";
+            }
+          </script>
+          <label id="label-name">
+            Nome Completo
+            <input type="text" name="name" placeholder="Digite seu nome" onblur="blurInput(this)">
+          </label>
+          <label id="label-email">
+            Email
+            <input type="text" name="email" placeholder="Digite seu email" onblur="blurInput(this)" />
+          </label>
+          <label id="label-phone">
+            Telefone
+            <input type="text" name="phone" placeholder="Digite seu telefone" onblur="blurInput(this)" />
+          </label>
+          <label id="label-company">
+            Nome da empresa
+            <input type="text" name="company" placeholder="Digite nome da empresa" onblur="blurInput(this)" />
+          </label>
+          <label id="label-message">
+            Mensagem
+            <input type="text" name="message" placeholder="Digite sua mensagem" onblur="blurInput(this)" />
+          </label>
+        </div>
+        <button type="submit" class="contact__form-button">
+          Enviar
+          <svg stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#EDF1F7"
+              d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z">
+            </path>
+          </svg>
+        </button>
+      </form>
+      <div class="contact__info">
+        <h1>
+          Informações de contato
+        </h1>
+        <div class="contact__infos">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+              <path
+                d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+            </svg>
             <div>
-              <svg viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z">
-                </path>
-              </svg>
-              <div>
-                <p>Whatsapp- (27) 99856-6488</p>
-                <p>Email - peterleite.dev@gmail.com </p>
-              </div>
+              <p>Av Republica</p>
+              <p>Interlagos</p>
+              <p>Linhares/ES</p>
             </div>
           </div>
-
-          <div class="contact__socials">
-            <a class="contact__socials--link" href="https://github.com/petertechdev" target="_blank"><i class="fab fa-github"></i></a>
-            <a class="contact__socials--link" href="https://www.linkedin.com/in/petertechdev/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <div>
+            <svg viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z">
+              </path>
+            </svg>
+            <div>
+              <p>Whatsapp- (27) 99856-6488</p>
+              <p>Email - peterleite.dev@gmail.com </p>
+            </div>
           </div>
-        </main>
+          <div class="contact__socials">
+            <a class="contact__socials--link" href="https://github.com/petertechdev" target="_blank"><i
+                class="fab fa-github"></i></a>
+            <a class="contact__socials--link" href="https://www.linkedin.com/in/petertechdev/" target="_blank"><i
+                class="fab fa-linkedin"></i></a>
+          </div>
+        </div> <!-- end contact infos -->
       </div>
+
     </div>
   </section>
 
