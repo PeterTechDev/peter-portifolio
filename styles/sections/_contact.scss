@@ -177,19 +177,17 @@ label {
 
 .contact__socials {
   display: flex;
-  column-gap: 32px;
-}
+  column-gap: 20px;
 
-.contact__socials svg {
-  width: 32px;
-  height: 32px;
-  color: var(--purple);
-  transition: all 0.4s;
-
-  &:hover {
-    transform: scale(1.2);
+  &--link {
+    font-size: 40px;
+    transition: all 0.4s;
     color: var(--purple-light);
-    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+      color: var(--purple-light);
+      cursor: pointer;
+    }
   }
 }
-
