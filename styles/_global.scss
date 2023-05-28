@@ -9,6 +9,11 @@ $header-height: 300px;
   scroll-behavior: smooth !important;
 }
 
+*, html {
+
+  scroll-behavior: smooth !important;
+}
+
 :root {
   --text: #3e3e3e;
 
@@ -16,11 +21,6 @@ $header-height: 300px;
   --silver: #6e6e6e;
   --purple: #4d386d;
   --purple-light: #674394;
-}
-
-*, html {
-
-  scroll-behavior: smooth !important;
 }
 
 html,
