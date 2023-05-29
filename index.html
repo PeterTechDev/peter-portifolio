@@ -396,7 +396,7 @@
   <section id="contact" class=" container">
     <h2 class="section-title" readonly>Contato</h2>
     <div class="contact">
-      <form class="contact__form" onsubmit="submitForm(event)">
+      <form class="contact__form" onsubmit="submitForm(event)" name="peter-contact" netlify>
         <h1 class="contact__form-title">
           Entre em contato
           <svg class="contact__form-icon" stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -418,7 +418,6 @@
 
             function submitForm(event) {
               event.preventDefault(); // Impede o envio padrão do formulário
-              console.log("submitForm");
 
               // Envio do formulário para o Netlify
               var form = event.target;
