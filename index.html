@@ -18,7 +18,6 @@
 
   <title>Peter Leite Souza Portifolio</title>
 </head>
-
 <body>
   <header id="header-scroll" class="header small">
     <h1 class="header__title">PeterTechDev</h1>
@@ -29,7 +28,6 @@
       <a class="header__link" href="#contact">Contato</a>
     </nav>
   </header>
-
   <div class="bg-global">
     <h1 class="projects--title">PeterTechDev</h1>
   </div>
@@ -124,7 +122,6 @@
       </svg>
     </label>
   </div>
-
   <section id="home" class="about-me container">
     <div class="about-me__text-column">
       <h2>Olá, meu nome é <span class="highlight"> Peter</span> e eu sou <br> <span id="typed"
@@ -154,7 +151,7 @@
       </p>
       <button>
         <a target="_blank"
-          href="https://drive.google.com/uc?export=download&id=1LCuqxwtmZbovb-F2qnmpe7XK0ko8oXDO&confirm=t&uuid=48c40ed1-c2d5-4c37-96a1-5f881cf910ef&at=AKKF8vzbnuQ8uEzEb6C3uK_xNjiC:1684497697604">
+          href="./assets/Peter-Souza-CV.pdf">
           Baixar Curriculo
         </a>
       </button>
@@ -164,7 +161,6 @@
     </div>
     </div>
   </section>
-
   <section id="projects" class="container">
 
     <h2 class="section-title">Projetos</h2>
@@ -306,7 +302,6 @@
     </div>
 
   </section>
-
   <section id="skills" class="container skills">
     <h2 class="section-title">Skills</h2>
     <h3>
@@ -392,7 +387,6 @@
       </div>
     </div>
   </section>
-
   <section id="contact" class=" container">
     <h2 class="section-title" readonly>Contato</h2>
     <div class="contact">
@@ -411,32 +405,22 @@
             function blurInput(input) {
               const idLabel = "label-" + input.name;
               const isValue = input.value != "";
-
               const label = document.getElementById(idLabel);
               label.classList = isValue ? "active" : "";
             }
-
             function submitForm(event) {
               event.preventDefault(); // Impede o envio padrão do formulário
-
-              // Envio do formulário para o Netlify
-              var form = event.target;
-              var formData = new FormData(form);
+              let form = event.target;
+              let formData = new FormData(form);
               fetch(form.action, {
                 method: 'POST',
                 body: formData,
               })
                 .then(function (response) {
-                  // Exibe a modal após o envio bem-sucedido do formulário
                   document.getElementById('modal').style.display = 'block';
-
-                  // Aqui você pode adicionar qualquer lógica adicional que deseja realizar após o envio do formulário
                   document.getElementById('modal').style.display = 'block';
-
-                  // Por exemplo, você pode limpar os campos do formulário
                   form.reset();
                   console.log("submitForm");
-
                 })
                 .catch(function (error) {
                   console.error('Erro ao enviar o formulário:', error);
@@ -511,7 +495,6 @@
           </div>
         </div> <!-- end contact infos -->
       </div>
-
       <div id="modal" class="modal">
         <div class="modal-content">
           <video src="./assets/successfully-send.mp4" muted autoplay type="type/mp4"></video>
