@@ -11,6 +11,7 @@ console.log("contact.js is loaded");
 export { blurInput };
 
 document.querySelector('form[name="contact"]').addEventListener('submit', function (event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
 
   // Exibe a modal
   document.getElementById('modal').style.display = 'block';
