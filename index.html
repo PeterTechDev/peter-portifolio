@@ -396,7 +396,7 @@
   <section id="contact" class=" container">
     <h2 class="section-title" readonly>Contato</h2>
     <div class="contact">
-      <form class="contact__form" name="contact-netlify" netlify>
+      <form class="contact__form" onsubmit="submitForm(event)">
         <h1 class="contact__form-title">
           Entre em contato
           <svg class="contact__form-icon" stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -416,7 +416,35 @@
               label.classList = isValue ? "active" : "";
             }
 
+            function submitForm(event) {
+              event.preventDefault(); // Impede o envio padrão do formulário
+              console.log("submitForm");
+
+              // Envio do formulário para o Netlify
+              var form = event.target;
+              var formData = new FormData(form);
+              fetch(form.action, {
+                method: 'POST',
+                body: formData,
+              })
+                .then(function (response) {
+                  // Exibe a modal após o envio bem-sucedido do formulário
+                  document.getElementById('modal').style.display = 'block';
+
+                  // Aqui você pode adicionar qualquer lógica adicional que deseja realizar após o envio do formulário
+                  document.getElementById('modal').style.display = 'block';
+
+                  // Por exemplo, você pode limpar os campos do formulário
+                  form.reset();
+                  console.log("submitForm");
+
+                })
+                .catch(function (error) {
+                  console.error('Erro ao enviar o formulário:', error);
+                });
+            }
           </script>
+
           <label id="label-name">
             Nome
             <input required type="text" name="name" placeholder="Digite seu nome" onblur="blurInput(this)">
