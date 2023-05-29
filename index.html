@@ -153,8 +153,7 @@
         vida dos usuários mais fácil e eficiente.
       </p>
       <button>
-        <a
-          target="_blank"
+        <a target="_blank"
           href="https://drive.google.com/uc?export=download&id=1LCuqxwtmZbovb-F2qnmpe7XK0ko8oXDO&confirm=t&uuid=48c40ed1-c2d5-4c37-96a1-5f881cf910ef&at=AKKF8vzbnuQ8uEzEb6C3uK_xNjiC:1684497697604">
           Baixar Curriculo
         </a>
@@ -397,7 +396,7 @@
   <section id="contact" class=" container">
     <h2 class="section-title" readonly>Contato</h2>
     <div class="contact">
-      <form class="contact__form">
+      <form class="contact__form" name="contact" netlify>
         <h1 class="contact__form-title">
           Entre em contato
           <svg class="contact__form-icon" stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -416,20 +415,15 @@
               const label = document.getElementById(idLabel);
               label.classList = isValue ? "active" : "";
             }
+
           </script>
           <label id="label-name">
             Nome
-            <input required  type="text" name="name" placeholder="Digite seu nome" onblur="blurInput(this)">
+            <input required type="text" name="name" placeholder="Digite seu nome" onblur="blurInput(this)">
           </label>
           <label id="label-email">
             Email
-            <input
-            type="email"
-            name="email"
-            placeholder="email@email.com"
-            onblur="blurInput(this)"
-            required
-            />
+            <input type="email" name="email" placeholder="email@email.com" onblur="blurInput(this)" required />
           </label>
           <label id="label-phone">
             Telefone
@@ -490,6 +484,15 @@
           </div>
         </div> <!-- end contact infos -->
       </div>
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <video src="./assets/successfully-send.mp4" muted autoplay type="type/mp4"></video>
+          <h1>
+            Mensagem enviado com sucesso!
+          </h1>
+        </div>
+      </div>
     </div>
   </section>
   <footer>
@@ -508,4 +511,5 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script type="module" src="script/main.js"></script>
 </body>
+
 </html>
