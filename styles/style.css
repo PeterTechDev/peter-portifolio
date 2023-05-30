@@ -4,6 +4,7 @@
   --color-secondary: #6c757d;
   --background-color: #ffffff;
   --color-text: #000000;
+  --color-highlight: #9B5DE5;
 }
 
 .dark-theme {
@@ -11,6 +12,7 @@
   --color-secondary: #5a5e62;
   --background-color: #1c1c1c;
   --color-text: #f8f8f8;
+  --color-highlight: #00F5D4;
 }
 
 *,
@@ -73,11 +75,8 @@ body {
 }
 
 a {
-  color: var(--color-primary);
-}
-
-h2 {
-  color: var(--color-secondary);
+  color: var(--color-text);
+  font-family: inherit;
 }
 
 li {
@@ -132,7 +131,7 @@ body.dark-mode {
 }
 .header__title {
   font-size: 42px;
-  color: #9B5DE5;
+  color: var(--color-highlight);
   line-height: 230px;
   transition: all 0.5s ease;
 }
@@ -148,19 +147,18 @@ body.dark-mode {
   background-color: var(--color-primary);
 }
 .header__link {
-  color: var(--background);
   display: inline-block;
   padding: 10px;
   line-height: 1;
   text-decoration: none;
-  border-radius: 2px;
   transition: all 0.3s ease;
+  border-radius: 12px;
 }
 .header__link.active {
-  border: 2px solid var(--secondary);
+  border: 2px solid var(--color-highlight);
 }
 .header__link:hover {
-  box-shadow: 0 0 0 1px var(--secondary);
+  box-shadow: 0 0 0 1px var(--color-highlight);
   transform: scale(0.9);
   cursor: pointer;
 }
@@ -210,24 +208,37 @@ body.sticky-header .header__title {
   text-align: left;
 }
 .about-me__text-column h2 .highlight {
-  color: #9B5DE5;
+  color: var(--color-highlight);
 }
 .about-me__text-column p {
   font-size: 1.2rem;
   margin-bottom: 30px;
 }
 .about-me__text-column button {
-  background-color: #FF9770;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 0.6em;
+  border: 2px solid var(--color-highlight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin: 0 auto;
+  padding: 1.2em 2.8em;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  color: var(--color-text);
+}
+.about-me__text-column button i {
+  color: var(--color-highlight);
+  padding-right: 10px;
 }
 .about-me__text-column button:hover {
-  background-color: #F15BB5;
+  box-shadow: 0 0 40px 40px var(--color-highlight) inset;
+}
+.about-me__text-column button:hover i {
+  color: var(--color-text);
 }
 .about-me__image-column {
   text-align: center;
@@ -245,7 +256,6 @@ body.sticky-header .header__title {
   border-radius: 10px;
 }
 .about-me__profile-image {
-  background-color: #9B5DE5;
   animation: animate 3s linear infinite;
 }
 
@@ -441,7 +451,7 @@ body.sticky-header .about-me {
   text-align: center;
 }
 .skills-container .skill:hover {
-  background-color: #00BBF9;
+  background-color: var(--color-primary);
   cursor: pointer;
 }
 .skills-container .skill:hover img {
@@ -488,7 +498,9 @@ svg {
 .contact__form-icon {
   width: 40px;
   height: 40px;
-  color: var(--purple);
+}
+.contact__form-icon path {
+  fill: var(--color-highlight);
 }
 .contact__form-inputs {
   display: grid;
@@ -507,14 +519,13 @@ svg {
   position: relative;
   font-size: 14px;
   letter-spacing: -0.3px;
-  font-weight: 400;
-  color: var(--silver);
+  font-weight: 600;
   padding-bottom: 6px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--color-text);
 }
 .contact__form-inputs label:focus-within, .contact__form-inputs label.active {
-  color: green;
-  border-bottom: 1px solid rgba(156, 251, 49, 0.515);
+  color: var(--color-highlight);
+  border-bottom: 1px solid var(--color-highlight);
 }
 @media (min-width: 768px) {
   .contact__form-inputs label:last-child {
@@ -535,49 +546,58 @@ svg {
   transition: transform 0.4s;
   width: 100%;
   height: 2px;
-  background: rgba(156, 251, 49, 0.515);
+  background: var(--color-highlight);
 }
 .contact__form-inputs input {
   font-size: 18px;
   border: 0;
   outline: 0;
   background: transparent;
+  color: var(--color-text);
 }
 .contact__form-inputs input::placeholder {
-  color: var(--silver);
+  font-style: italic;
+  font-size: 1.3rem;
 }
 .contact__form-button {
+  background-color: transparent;
+  border-radius: 0.6em;
+  border: 2px solid var(--color-highlight);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   align-self: center;
+  margin: 0 auto;
+  padding: 1.2em 2.8em;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  cursor: pointer;
+  color: var(--color-text);
   width: 100%;
   max-width: 400px;
   height: 50px;
   font-size: 20px;
-  font-weight: 600;
-  color: var(--white);
-  background: var(--purple);
-  border-radius: 8px;
-  border: 0;
-  transition: all 0.4s;
 }
 .contact__form-button svg {
   width: 20px;
   height: 20px;
   margin-left: 16px;
 }
+.contact__form-button svg path {
+  fill: var(--color-highlight);
+}
 .contact__form-button:hover {
-  background: var(--purple-light);
-  filter: brightness(0.9);
-  cursor: pointer;
-  transform: scale(0.98);
+  box-shadow: 0 0 40px 40px var(--color-highlight) inset;
+}
+.contact__form-button:hover svg path {
+  fill: var(--color-text);
 }
 
 .contact__info {
   display: flex;
   flex-direction: column;
-  background: var(--text);
+  background: var(--color-primary);
   padding: 25px;
   color: var(--white);
 }
@@ -596,10 +616,6 @@ svg {
   min-height: 400px;
   max-width: 500px;
 }
-.contact__info .contact__infos #getInfo1,
-.contact__info .contact__infos #getInfo2 {
-  cursor: copy;
-}
 .contact__info .contact__infos-info {
   display: flex;
   align-items: center;
@@ -611,7 +627,7 @@ svg {
   height: 18px;
 }
 .contact__info .contact__infos-info svg path {
-  fill: var(--silver);
+  fill: var(--color-highlight);
 }
 .contact__info .contact__socials {
   margin-top: 60px;
@@ -620,13 +636,12 @@ svg {
   column-gap: 20px;
 }
 .contact__info .contact__socials--link {
-  font-size: 35px;
+  font-size: 40px;
   transition: all 0.4s;
-  color: rgb(89, 89, 216);
+  color: var(--color-highlight);
 }
 .contact__info .contact__socials--link:hover {
   transform: scale(1.2);
-  color: var(--purple-light);
   cursor: pointer;
 }
 
@@ -661,6 +676,7 @@ svg {
   overflow: hidden;
   animation: animationText 1s forwards;
   animation-delay: 2s;
+  color: #1c1c1c;
 }
 
 @keyframes animationText {
@@ -669,12 +685,11 @@ svg {
   }
   100% {
     height: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 }
 footer {
-  background-color: #f50000;
-  color: #fff;
+  background-color: var(--color-primary);
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -684,7 +699,8 @@ footer {
 footer .footer-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
   align-items: center;
   width: 100%;
 }

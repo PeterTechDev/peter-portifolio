@@ -14,40 +14,40 @@ $color-warning: #FEE440;
 $color-danger: #dc3545;
 $color-text: black;
 
-$color-highlight: #9B5DE5;
-$color-button: #FF9770;
-$color-button-hover: #F15BB5;
+$color-button: #F15BB5;
+$color-button-hover: #bd227f;
 
 // _colors.scss
 $color-primary-light: #70D6FF;
 $color-secondary-light: #6c757d;
 $color-background-light: #ffffff;
 $color-text-light: #000000;
+$color-highlight-light: #9B5DE5;
+
 
 $color-primary-dark: #065c6c;
 $color-secondary-dark: #5a5e62;
 $color-background-dark: #1c1c1c;
 $color-text-dark: #f8f8f8;
+$color-highlight-dark: #00F5D4;
 
 // _themes.scss
-@mixin theme($primary, $secondary, $background, $text) {
+@mixin theme($primary, $secondary, $background, $text, $highlight) {
   --color-primary: #{$primary};
   --color-secondary: #{$secondary};
   --background-color: #{$background};
   --color-text: #{$text};
+  --color-highlight: #{$highlight};
 }
 
 // _themes.scss
 .light-theme {
-  @include theme($color-primary-light, $color-secondary-light, $color-background-light, $color-text-light);
+  @include theme($color-primary-light, $color-secondary-light, $color-background-light, $color-text-light, $color-highlight-light);
 }
 
 .dark-theme {
-  @include theme($color-primary-dark, $color-secondary-dark, $color-background-dark, $color-text-dark);
+  @include theme($color-primary-dark, $color-secondary-dark, $color-background-dark, $color-text-dark, $color-highlight-dark);
 }
-
-
-
 
 // _reset.scss
 *,
@@ -113,11 +113,8 @@ body {
 }
 
 a {
-  color: var(--color-primary);
-}
-
-h2 {
-  color: var(--color-secondary);
+  color: var(--color-text);
+  font-family: inherit;
 }
 
 li {

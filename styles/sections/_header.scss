@@ -14,7 +14,7 @@
 
 	&__title{
 		font-size: 42px;
-		color: $color-highlight;
+		color: var(--color-highlight);
 		line-height: 230px;
 		transition: all 0.5s ease;
 	}
@@ -31,25 +31,24 @@
 		background-color: var(--color-primary);
 	}
 
-    &__link {
-        color: var(--background);
-        display: inline-block;
-        padding: 10px;
-        line-height: 1;
-        text-decoration: none;
-        border-radius: 2px;
-        transition: all 0.3s ease;
+	&__link {
+		display: inline-block;
+		padding: 10px;
+		line-height: 1;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		border-radius: 12px;
 
-        &.active {
-            border: 2px solid var(--secondary);
-        }
+		&.active {
+			border: 2px solid var(--color-highlight);
+		}
 
-        &:hover{
-            box-shadow: 0 0 0 1px var(--secondary);
-            transform: scale(0.9);
-            cursor: pointer;
-        }
-    }
+		&:hover{
+			box-shadow: 0 0 0 1px var(--color-highlight);
+			transform: scale(0.9);
+			cursor: pointer;
+		}
+	}
 }
 
 /* Sticky Header Style */	

@@ -9,11 +9,9 @@ svg {
   flex-direction: column;
   overflow: hidden;
   margin-bottom: 2vh;
-
   box-shadow: 3px 3px 25px 6px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
 
-  // create a media screen min 768
   @media (min-width: 968px) {
     flex-direction: row;
   }
@@ -23,7 +21,6 @@ svg {
   display: flex;
   flex-direction: column;
   row-gap: 40px;
-
   flex: 1;
   padding: 25px;
   
@@ -35,14 +32,16 @@ svg {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     font-size: 24px;
   }
 
   &-icon {
     width: 40px;
     height: 40px;
-    color: var(--purple);
+
+    & path {
+      fill: var(--color-highlight);
+    }
   }
 
   &-inputs {
@@ -50,8 +49,6 @@ svg {
     grid-template-columns: 1fr;
     gap: 32px;
 
-
-  
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
     }
@@ -61,18 +58,15 @@ svg {
       flex-direction: column;
       row-gap: 8px;
       position: relative;
-
       font-size: 14px;
       letter-spacing: -.3px;
-      font-weight: 400;
-      color: var(--silver);
-
+      font-weight: 600;
       padding-bottom: 6px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid var(--color-text);
 
       &:focus-within, &.active {
-        color: green;
-        border-bottom: 1px solid rgba(156, 251, 49, 0.515);
+        color: var(--color-highlight);
+        border-bottom: 1px solid var(--color-highlight);
       }
 
       @media (min-width: 768px) {
@@ -98,7 +92,7 @@ svg {
     
         width: 100%;
         height: 2px;
-        background: rgba(156, 251, 49, 0.515);
+        background: var(--color-highlight);
       }
     }
 
@@ -107,43 +101,38 @@ svg {
       border: 0;
       outline: 0;
       background: transparent;
+      color: var(--color-text);
   
       &::placeholder {
-        color: var(--silver);
+        font-style: italic;
+        font-size: 1.3rem;
       }
     }
   }
 
   &-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    align-self: center;
+    @include button-style;
     width: 100%;
     max-width: 400px;
     height: 50px;
-
     font-size: 20px;
-    font-weight: 600;
-    color: var(--white);
-    background: var(--purple);
-    border-radius: 8px;
-    border: 0;
-
-    transition: all 0.4s;
 
     & svg {
       width: 20px;
       height: 20px;
       margin-left: 16px;
+
+      & path {
+        fill: var(--color-highlight);
+      }
     }
 
     &:hover {
-      background: var(--purple-light);
-      filter: brightness(0.9);
-      cursor: pointer;
-      transform: scale(.98);
+      box-shadow: 0 0 40px 40px var(--color-highlight) inset;
+
+      svg path {
+        fill: var(--color-text);
+      }
     }
   }
 }
@@ -152,7 +141,7 @@ svg {
   display: flex;
   flex-direction: column;
 
-  background: var(--text);
+  background: var(--color-primary);
   padding: 25px;
   color: var(--white);
 
@@ -171,12 +160,6 @@ svg {
     min-height: 400px;
     max-width: 500px;
 
-    #getInfo1,
-    #getInfo2 {
-      cursor: copy;
-
-    }
-  
     &-info {
       display: flex;
       align-items: center;
@@ -188,7 +171,7 @@ svg {
         height: 18px;
 
         & path {
-          fill: var(--silver);
+          fill: var(--color-highlight);
         }
       }
     }
@@ -201,13 +184,12 @@ svg {
     column-gap: 20px;
 
     &--link {
-      font-size: 35px;
+      font-size: 40px;
       transition: all 0.4s;
-      color: rgb(89, 89, 216);
+      color: var(--color-highlight);
   
       &:hover {
         transform: scale(1.2);
-        color: var(--purple-light);
         cursor: pointer;
       }
     }
@@ -247,6 +229,7 @@ svg {
     overflow: hidden;
     animation: animationText 1s forwards;
     animation-delay: 2s;
+    color: #1c1c1c;
   }
 }  
 
@@ -256,6 +239,6 @@ svg {
   }
   100% {
     height: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 }

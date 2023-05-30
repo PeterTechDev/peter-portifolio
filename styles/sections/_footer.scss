@@ -1,10 +1,6 @@
-$footer-bg-color: $color-primary;
-$footer-text-color: #fff;
-$logo-img-size: 80px;
 
 footer {
-  background-color: $footer-bg-color;
-  color: $footer-text-color;
+  background-color: var(--color-primary);
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -14,15 +10,16 @@ footer {
   .footer-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
     align-items: center;
     width: 100%;
     
     .logo {
       margin-bottom: 20px;
       img {
-        width: $logo-img-size;
-        height: $logo-img-size;
+        width: 80px;
+        height: 80px;
       }
     }
     
