@@ -453,6 +453,7 @@ body.sticky-header .about-me {
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: start;
+  justify-items: center;
   text-align: center;
   grid-gap: 1rem;
   width: 100%;
@@ -461,7 +462,7 @@ body.sticky-header .about-me {
 }
 @media (min-width: 990px) {
   .skills {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 1200px) {
@@ -897,14 +898,15 @@ footer .copy {
   color: var(--color-highlight);
   padding-top: 1.8em;
   display: block; /* or block */
-  border-color: var(--color-highlight);
   text-decoration: none;
   transition: all 0.3s ease-out;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
   font-weight: bold;
+  border: 0;
   z-index: 100;
+  background: transparent;
   position: fixed;
   bottom: 40px;
   right: 30px;

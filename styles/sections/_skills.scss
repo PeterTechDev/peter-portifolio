@@ -9,6 +9,7 @@ $transition-time: 0.5s;
   grid-template-columns: repeat(2, 1fr); // Modificado para 2 colunas em mobile
   justify-content: center;
   align-items: start;
+  justify-items: center;
   text-align: center;
   grid-gap: 1rem;
   width: 100%;
@@ -16,7 +17,7 @@ $transition-time: 0.5s;
   font-size: 1.2rem;
   
   @media (min-width: $tablet) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   
   @media (min-width: $desktop) {
