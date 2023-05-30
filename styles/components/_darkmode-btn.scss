@@ -6,9 +6,9 @@ $button-radius: 15px;
   width: $width;
   height: $height;
   position: fixed;
-  right: 2%;
+  right: 3vw;
   z-index: 101;
-  top: 115px;
+  top: 7vh;
 
   label {
     width: 100%;
@@ -60,13 +60,13 @@ $button-radius: 15px;
   }
 
   input:checked + label {
-    background: #242424;
+    background: var(--color-highlight);
   }
 
   input:checked + label:after {
     left: $width * .75;
     transform: translateX(-50%);
-    background: linear-gradient(180deg, #777, #3a3a3a);
+    background: linear-gradient(180deg, #777, #173234);
   }
 
   label:active:after {

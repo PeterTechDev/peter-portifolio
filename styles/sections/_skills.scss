@@ -8,7 +8,7 @@ $transition-time: 0.5s;
   display: grid;
   grid-template-columns: repeat(2, 1fr); // Modificado para 2 colunas em mobile
   justify-content: center;
-  align-items: center;
+  align-items: start;
   text-align: center;
   grid-gap: 1rem;
   width: 100%;

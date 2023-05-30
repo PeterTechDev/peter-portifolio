@@ -76,7 +76,7 @@ section::before {
 }
 
 .container {
-  width: 95%;
+  width: 92%;
   max-width: 1366px;
   margin: 0 auto;
   margin-top: 10vh;
@@ -427,7 +427,7 @@ body.sticky-header .about-me {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  align-items: center;
+  align-items: start;
   text-align: center;
   grid-gap: 1rem;
   width: 100%;
@@ -778,9 +778,9 @@ footer .copy {
   width: 60px;
   height: 30px;
   position: fixed;
-  right: 2%;
+  right: 3vw;
   z-index: 101;
-  top: 115px;
+  top: 7vh;
 }
 #darkmode-btn-container label {
   width: 100%;
@@ -826,12 +826,12 @@ footer .copy {
   visibility: hidden;
 }
 #darkmode-btn-container input:checked + label {
-  background: #242424;
+  background: var(--color-highlight);
 }
 #darkmode-btn-container input:checked + label:after {
   left: 45px;
   transform: translateX(-50%);
-  background: linear-gradient(180deg, #777, #3a3a3a);
+  background: linear-gradient(180deg, #777, #173234);
 }
 #darkmode-btn-container label:active:after {
   width: 30px;
