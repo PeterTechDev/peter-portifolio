@@ -1,0 +1,31 @@
+$light: (
+  primary: #007A33, // Verde Celtics
+  secondary: #BA9653, // Dourado Celtics
+  background: #ffffff, // Branco
+  text: #000000, // Preto
+);
+
+$dark: (
+  primary: #00471B, // Versão mais escura do verde
+  secondary: #876029, // Versão mais escura do dourado
+  background: #000000, // Preto
+  text: #ffffff, // Branco
+);
+
+// Função mixin para gerar os temas
+@mixin theme($theme) {
+  --primary: #{map-get($theme, 'primary')};
+  --secondary: #{map-get($theme, 'secondary')};
+  --background: #{map-get($theme, 'background')};
+  --text: #{map-get($theme, 'text')};
+}
+
+// Gera o CSS para os temas claro e escuro
+body.light-mode {
+  @include theme($light);
+}
+
+body.dark-mode {
+  @include theme($dark);
+}
+

@@ -1,47 +1,84 @@
+// _variables.scss
 $header-height: 300px;
+$font-size: 8rem;
+$font-size-mobile: $font-size - 3rem;
+$container-hd-resolution: 1366px;
 
-* {
+// _colors.scss
+$color-primary: #f50000;
+$color-secondary: #00BBF9;
+
+$color-success: #001eff;
+$color-info: #17a2b8;
+$color-warning: #FEE440;
+$color-danger: #dc3545;
+$color-text: black;
+
+$color-highlight: #9B5DE5;
+$color-button: #FF9770;
+$color-button-hover: #F15BB5;
+
+// _colors.scss
+$color-primary-light: #70D6FF;
+$color-secondary-light: #6c757d;
+$color-background-light: #ffffff;
+$color-text-light: #000000;
+
+$color-primary-dark: #065c6c;
+$color-secondary-dark: #5a5e62;
+$color-background-dark: #1c1c1c;
+$color-text-dark: #f8f8f8;
+
+// _themes.scss
+@mixin theme($primary, $secondary, $background, $text) {
+  --color-primary: #{$primary};
+  --color-secondary: #{$secondary};
+  --background-color: #{$background};
+  --color-text: #{$text};
+}
+
+// _themes.scss
+.light-theme {
+  @include theme($color-primary-light, $color-secondary-light, $color-background-light, $color-text-light);
+}
+
+.dark-theme {
+  @include theme($color-primary-dark, $color-secondary-dark, $color-background-dark, $color-text-dark);
+}
+
+
+
+
+// _reset.scss
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   outline: 0;
   text-decoration: none;
-  scroll-behavior: smooth !important;
 }
 
-*, html {
-
-  scroll-behavior: smooth !important;
-}
-
-:root {
-  --text: #3e3e3e;
-
-  --white: #F6F8FF;
-  --silver: #6e6e6e;
-  --purple: #4d386d;
-  --purple-light: #674394;
-}
-
-html,
-body {
-  transition: all 0.5s ease;
-  position: relative;
-  /* 1rem iquals to 10px */
-  font-size: 62.5%;
-  scroll-behavior: smooth !important; 
-  height: 100vh;
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;  // 1rem == 10px
+  height: 100%;
   text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased;
-  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-  //   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  //   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Montserrat', sans-serif;
-
 }
 
+body {
+  transition: all 0.5s ease;
+  position: relative;
+  height: 100%;
+  font-size: 1.6rem;
+  color: $color-text;
+}
+
+// _layout.scss
 .hidden {
   display: none;
 }
@@ -49,7 +86,6 @@ body {
 section {
   min-height: 80vh;
 }
-
 
 .bg-global{
   position: fixed;
@@ -63,52 +99,29 @@ section {
   filter: opacity(0.1);
 }
 
-// TODO: Definir Cores do modo claro
-$color-primary: #007bff;
-$color-secondary: #6c757d;
-$color-success: #28a745;
-$color-info: #17a2b8;
-$color-warning: #ffc107;
-$color-danger: #dc3545;
-$color-text: black;
-
-$color-highlight: #ff5e3a;
-$color-button: #ff5e3a;
-$color-button-hover: #db4a29;
-
-// TODO: Definir Cores do modo escuro
-.dark-mode {
-  --color-primary: #003b6f;
-  --color-secondary: #5a5e62;
-  --color-success: #1d5e2a;
-  --color-info: #0f5e79;
-  --color-warning: #9a6700;
-  --color-danger: #720d1c;
-  background-color: #1c1c1c;
-  color: #f8f8f8;
+// _container.scss
+.container {
+  width: 95%;
+  max-width: $container-hd-resolution;
+  margin: 0 auto;
 }
 
-//Resolution
-$container-hd-resolution: 1366px;
-
+// _typography.scss
 body {
-  font-size: 1.6rem;
-  color: $color-text;
+  background: var(--background-color);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-primary);
+}
+
+h2 {
+  color: var(--color-secondary);
 }
 
 li {
   list-style: none;
-}
-
-a {
-  color: inherit
-}
-
-.container {
-  width: 95%;
-  max-width: $container-hd-resolution;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .section-title {
@@ -117,71 +130,17 @@ a {
   font-size: 5rem;
   margin-bottom: 5rem;
   position: relative;
-  margin-bottom: 2rem; // espaçamento entre o título e a linha horizontal
 
-  
   &::after {
     content: '';
     position: absolute;
     width: 100%;
-    bottom: 100%; // alinhando a linha horizontal ao centro do título
+    bottom: 0;
     left: 0;
-    border-top: 1px solid #ccc; // cor da linha horizontal
+    border-top: 1px solid #ccc;
     
     @media (min-width: 980px) {
-      bottom: 150%;
+      bottom: -50%;
     }
-  }
-}
-
-.dark-mode .btn {
-  background-color: var(--color-primary);
-  color: #fff;
-}
-
-.dark-mode a {
-  color: #fff;
-}
-
-/* Para evitar todo o BOOTSTRAP criei um sistema próprio de grid */
-/* Definindo as larguras das colunas */
-.col-1 {
-  width: 8.33%;
-}
-.col-2 {
-  width: 16.66%;
-}
-.col-3 {
-  width: 25%;
-}
-.col-4 {
-  width: 33.33%;
-}
-.col-6 {
-  width: 50%;
-}
-.col-12 {
-  width: 100%;
-}
-
-/* Criando as classes para diferentes tamanhos de tela */
-@media (min-width: 980px) {
-  .col-md-1 {
-    width: 8.33%;
-  }
-  .col-md-2 {
-    width: 16.66%;
-  }
-  .col-md-3 {
-    width: 25%;
-  }
-  .col-md-4 {
-    width: 33.33%;
-  }
-  .col-md-6 {
-    width: 50%;
-  }
-  .col-md-12 {
-    width: 100%;
   }
 }
