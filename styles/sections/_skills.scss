@@ -1,57 +1,84 @@
-.skills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
+$mobile: 650px;
+$tablet: 990px;
+$desktop: 1200px;
+$transition-time: 0.5s;
 
-  &__stacks {
-    width: 100%;
-    padding: 20px 0;
-    text-align: left;
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // Modificado para 2 colunas em mobile
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(5, 1fr);
   }
 
-  &-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;  
-    margin-top: 30px;
+  &__box {
+    padding: 1rem;
+    color: var(--color-text);
+    cursor: pointer;
+    max-width: 200px;
+    transition: all .5s ease-in-out;
+    border-radius: 25%;
+    
+    &:hover img {
+      transform: translateY(-5px);
+    }
+      
+    &:hover .skills__heading {
+      color: var(--color-highlight);
+    }
+  }
 
-    @media (min-width: 768px) {
-      gap: 40px;  
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    
+    &::after, &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 20px;
+      height: 2px;
+      border-radius: 2px 0 0 2px;
+      background-color: var(--color-highlight);
     }
 
-    .skill {
+    &::before {
+      width: 80px;
+      border-radius: 0 2px 2px 0;
+    }
+  }
+
+  &__icon {
+    width: 50px;
+    transition: all .3s ease-in-out;
+    z-index: 2;
+
+    &-container {
+      width: 90px;
+      height: 90px;
+      position: relative;
+      border-radius: 50%;
+      background-color: transparent;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      width: 100px;
-      height: 100px;
-      border-radius: 10%;
-      overflow: hidden;
-      transition: background-color 0.3s ease-in-out;
-
-      img {
-        width: 60px;
-        filter: grayscale(100%);
-        transition: filter 0.3s ease-in-out;
-      }
-
-      span {
-        margin-top: 10px;
-        font-size: 1rem;
-        text-align: center;
-      }
-
-      &:hover {
-        background-color: var(--color-primary);
-        cursor: pointer;
-
-        img {
-          filter: grayscale(0%);
-        }
-      }
+      align-items: center;
+      transition: $transition-time;
     }
   }
 }
