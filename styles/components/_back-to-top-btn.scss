@@ -1,65 +1,46 @@
-#scroll-to-top {
-  display: inline-block;
-  background-color: var(--color-highlight);
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  border-radius: 4px;
-  position: fixed;
-  bottom: 70px;
-  right: 30px;
-  transition: all .3s, 
-  opacity .5s, visibility .5s;
+
+//new
+.scroll-to-top{
+	color:var(--color-highlight);
+	padding-top:1.8em;
+	display: block;/* or block */
+	border-color: var(--color-highlight);
+	text-decoration:none;
+	transition:all .3s ease-out;
+  cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  z-index: 1000;
+  font-weight: bold;
+  z-index: 100;
+
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
 }
-#scroll-to-top::after {
-  content: "\f077";
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 35px;
-  color: var(--color-text);
+.scroll-to-top:before{
+	content:'▲';
+	font-size:1.1em;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-.7em;
+	border:solid .13em var(--color-highlight);
+	border-radius:10em;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.3em;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+  text-align: center;
 }
-#scroll-to-top:hover {
-  cursor: pointer;
-  background-color: #333;
+.scroll-to-top:hover{
   transform: translateY(-5px);
 }
-#scroll-to-top:active {
-  background-color: #555;
-}
-#scroll-to-top.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Styles for the content section */
-
-.content {
-  width: 77%;
-  margin: 50px auto;
-  font-family: 'Merriweather', serif;
-  font-size: 17px;
-  color: #6c767a;
-  line-height: 1.9;
-}
-@media (min-width: 500px) {
-  .content {
-    width: 43%;
-  }
-  #button {
-    margin: 30px;
-  }
-}
-.content h1 {
-  margin-bottom: -10px;
-  color: #03a9f4;
-  line-height: 1.5;
-}
-.content h3 {
-  font-style: italic;
-  color: #96a2a7;
+.scroll-to-top:hover:before{
+	transform: rotate(360deg);
 }
