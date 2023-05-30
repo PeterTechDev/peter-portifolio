@@ -1,39 +1,44 @@
-@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-* {
+.light-theme {
+  --color-primary: #70D6FF;
+  --color-secondary: #6c757d;
+  --background-color: #ffffff;
+  --color-text: #000000;
+}
+
+.dark-theme {
+  --color-primary: #065c6c;
+  --color-secondary: #5a5e62;
+  --background-color: #1c1c1c;
+  --color-text: #f8f8f8;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   outline: 0;
   text-decoration: none;
-  scroll-behavior: smooth !important;
 }
 
-*, html {
-  scroll-behavior: smooth !important;
-}
-
-:root {
-  --text: #3e3e3e;
-  --white: #F6F8FF;
-  --silver: #6e6e6e;
-  --purple: #4d386d;
-  --purple-light: #674394;
-}
-
-html,
-body {
-  transition: all 0.5s ease;
-  position: relative;
-  /* 1rem iquals to 10px */
+html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
-  scroll-behavior: smooth !important;
-  height: 100vh;
+  height: 100%;
   text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Montserrat", sans-serif;
+}
+
+body {
+  transition: all 0.5s ease;
+  position: relative;
+  height: 100%;
+  font-size: 1.6rem;
+  color: black;
 }
 
 .hidden {
@@ -56,35 +61,27 @@ section {
   filter: opacity(0.1);
 }
 
-.dark-mode {
-  --color-primary: #003b6f;
-  --color-secondary: #5a5e62;
-  --color-success: #1d5e2a;
-  --color-info: #0f5e79;
-  --color-warning: #9a6700;
-  --color-danger: #720d1c;
-  background-color: #1c1c1c;
-  color: #f8f8f8;
+.container {
+  width: 95%;
+  max-width: 1366px;
+  margin: 0 auto;
 }
 
 body {
-  font-size: 1.6rem;
-  color: black;
+  background: var(--background-color);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-primary);
+}
+
+h2 {
+  color: var(--color-secondary);
 }
 
 li {
   list-style: none;
-}
-
-a {
-  color: inherit;
-}
-
-.container {
-  width: 95%;
-  max-width: 1366px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .section-title {
@@ -93,84 +90,40 @@ a {
   font-size: 5rem;
   margin-bottom: 5rem;
   position: relative;
-  margin-bottom: 2rem;
 }
 .section-title::after {
   content: "";
   position: absolute;
   width: 100%;
-  bottom: 100%;
+  bottom: 0;
   left: 0;
   border-top: 1px solid #ccc;
 }
 @media (min-width: 980px) {
   .section-title::after {
-    bottom: 150%;
+    bottom: -50%;
   }
 }
 
-.dark-mode .btn {
-  background-color: var(--color-primary);
-  color: #fff;
+body.light-mode {
+  --primary: #007A33;
+  --secondary: #BA9653;
+  --background: #ffffff;
+  --text: #000000;
 }
 
-.dark-mode a {
-  color: #fff;
+body.dark-mode {
+  --primary: #00471B;
+  --secondary: #876029;
+  --background: #000000;
+  --text: #ffffff;
 }
 
-/* Para evitar todo o BOOTSTRAP criei um sistema próprio de grid */
-/* Definindo as larguras das colunas */
-.col-1 {
-  width: 8.33%;
-}
-
-.col-2 {
-  width: 16.66%;
-}
-
-.col-3 {
-  width: 25%;
-}
-
-.col-4 {
-  width: 33.33%;
-}
-
-.col-6 {
-  width: 50%;
-}
-
-.col-12 {
-  width: 100%;
-}
-
-/* Criando as classes para diferentes tamanhos de tela */
-@media (min-width: 980px) {
-  .col-md-1 {
-    width: 8.33%;
-  }
-  .col-md-2 {
-    width: 16.66%;
-  }
-  .col-md-3 {
-    width: 25%;
-  }
-  .col-md-4 {
-    width: 33.33%;
-  }
-  .col-md-6 {
-    width: 50%;
-  }
-  .col-md-12 {
-    width: 100%;
-  }
-}
 .header {
   width: 100%;
   height: 300px;
-  background-color: #3498db;
+  background-color: var(--color-primary);
   text-align: center;
-  position: relative;
   position: fixed;
   top: 0;
   overflow: hidden;
@@ -179,7 +132,7 @@ a {
 }
 .header__title {
   font-size: 42px;
-  color: #fff;
+  color: #9B5DE5;
   line-height: 230px;
   transition: all 0.5s ease;
 }
@@ -192,10 +145,10 @@ a {
   height: 60px;
   line-height: 60px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--color-primary);
 }
 .header__link {
-  color: #fff;
+  color: var(--background);
   display: inline-block;
   padding: 10px;
   line-height: 1;
@@ -204,10 +157,10 @@ a {
   transition: all 0.3s ease;
 }
 .header__link.active {
-  border: 2px solid #85C2FF;
+  border: 2px solid var(--secondary);
 }
 .header__link:hover {
-  box-shadow: 0 0 0 1px #85C2FF;
+  box-shadow: 0 0 0 1px var(--secondary);
   transform: scale(0.9);
   cursor: pointer;
 }
@@ -216,12 +169,17 @@ a {
 /* ---------------------------------------- */
 body.sticky-header .header {
   height: 60px;
-  background-color: rgba(52, 152, 219, 0.9);
+  background-color: var(--primary);
 }
 body.sticky-header .header__title {
   transform: scale(0);
 }
 
+@media (max-width: 768px) {
+  .header__title {
+    font-size: 5rem;
+  }
+}
 .about-me {
   padding: 20px 0;
   display: flex;
@@ -252,14 +210,14 @@ body.sticky-header .header__title {
   text-align: left;
 }
 .about-me__text-column h2 .highlight {
-  color: #ff5e3a;
+  color: #9B5DE5;
 }
 .about-me__text-column p {
   font-size: 1.2rem;
   margin-bottom: 30px;
 }
 .about-me__text-column button {
-  background-color: #ff5e3a;
+  background-color: #FF9770;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -269,7 +227,7 @@ body.sticky-header .header__title {
   transition: all 0.2s ease-in-out;
 }
 .about-me__text-column button:hover {
-  background-color: #db4a29;
+  background-color: #F15BB5;
 }
 .about-me__image-column {
   text-align: center;
@@ -287,7 +245,7 @@ body.sticky-header .header__title {
   border-radius: 10px;
 }
 .about-me__profile-image {
-  background-color: #ff5e3a;
+  background-color: #9B5DE5;
   animation: animate 3s linear infinite;
 }
 
@@ -483,7 +441,7 @@ body.sticky-header .about-me {
   text-align: center;
 }
 .skills-container .skill:hover {
-  background-color: #6c757d;
+  background-color: #00BBF9;
   cursor: pointer;
 }
 .skills-container .skill:hover img {
@@ -715,7 +673,7 @@ svg {
   }
 }
 footer {
-  background-color: #007bff;
+  background-color: #f50000;
   color: #fff;
   padding: 20px;
   display: flex;

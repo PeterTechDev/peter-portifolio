@@ -1,26 +1,22 @@
-
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-$font-size: 8rem;
-$font-size-mobile: $font-size -3rem;
+@import '../variables';  // Importe o arquivo global que contém a paleta de cores
 
 .header {
 	width: 100%;
 	height: 300px;
-	background-color: #3498db;
+	background-color: var(--color-primary);
 	text-align: center;
-	position: relative;
 	position: fixed;
 	top: 0;
 	overflow: hidden;
-  transition: all 0.5s ease;
-  z-index: 100;
+    transition: all 0.5s ease;
+    z-index: 100;
 
 	&__title{
 		font-size: 42px;
-		color: #fff;
+		color: $color-highlight;
 		line-height: 230px;
-    transition: all 0.5s ease;
+		transition: all 0.5s ease;
 	}
 
 	&__nav{
@@ -32,39 +28,46 @@ $font-size-mobile: $font-size -3rem;
 		height: 60px;
 		line-height: 60px;
 		width: 100%;
-		background-color: rgba(0,0,0,.1);
+		background-color: var(--color-primary);
 	}
 
-  &__link {
-    color: #fff;
-    display: inline-block;
-    padding: 10px;
-    line-height: 1;
-    text-decoration: none;
-    border-radius: 2px;
-		transition: all 0.3s ease;
+    &__link {
+        color: var(--background);
+        display: inline-block;
+        padding: 10px;
+        line-height: 1;
+        text-decoration: none;
+        border-radius: 2px;
+        transition: all 0.3s ease;
 
-		&.active {
-			border: 2px solid #85C2FF;
-		}
+        &.active {
+            border: 2px solid var(--secondary);
+        }
 
-		&:hover{
-			box-shadow: (0 0 0 1px #85C2FF);
-			transform: scale(0.9);
-			cursor: pointer;
-		}
-  }
+        &:hover{
+            box-shadow: 0 0 0 1px var(--secondary);
+            transform: scale(0.9);
+            cursor: pointer;
+        }
+    }
 }
 
 /* Sticky Header Style */	
 /* ---------------------------------------- */ 
-body.sticky-header{
+body.sticky-header {
 	.header {
 		height: 60px;
-		background-color: rgba(52,152,219,.9);
+		background-color: var(--primary);
 
 		&__title {
-      transform: scale(0);
+            transform: scale(0);
 		}
 	}
+}
+
+// Media queries for responsive font size
+@media (max-width: 768px) {
+    .header__title {
+        font-size: $font-size-mobile;
+    }
 }
