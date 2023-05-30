@@ -1,13 +1,14 @@
-// DARK MODE BUTTON
+const body = document.body;
 const toggleSwitch = document.querySelector('#darkmode-btn');
-toggleSwitch.addEventListener('change', switchTheme, false);
 
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.body.classList.add('dark-mode');
-    console.log("Dark Mode activated");
+toggleSwitch.addEventListener('click', function() {
+  if (body.classList.contains('light-theme')) {
+    body.classList.remove('light-theme');
+    body.classList.add('dark-theme');
+    console.log('Dark theme activated');
   } else {
-    document.body.classList.remove('dark-mode');
-    console.log("Dark Mode Deactivated");
-  }    
-}
+    body.classList.remove('dark-theme');
+    body.classList.add('light-theme');
+    console.log('Light theme activated');
+  }
+});
