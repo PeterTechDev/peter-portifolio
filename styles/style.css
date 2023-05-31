@@ -96,7 +96,7 @@ section::before {
   z-index: -10;
   max-width: 1920px;
   margin-top: 250px;
-  font-size: 7vw;
+  font-size: 6.6vw;
   filter: opacity(0.1);
 }
 

@@ -15,13 +15,14 @@
     rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" 
-  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" 
-  integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" 
-  crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+    integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-  <meta name="description" content="Página de portifólio do Peter Leite Souza para demonstrar habilidades e projetos como desenvolvedor">
-
+  <meta name="description"
+    content="Página de portifólio do Peter Leite Souza para demonstrar habilidades e projetos como desenvolvedor">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" />
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 
   <title>Peter Leite Souza Portifolio</title>
 </head>
@@ -41,7 +42,7 @@
   </div>
   <div id="darkmode-btn-container">
     <!-- busquei os icons no https://www.svgrepo.com/ -->
-    <input type="checkbox" id="darkmode-btn" />
+    <input type="checkbox" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000" id="darkmode-btn" />
     <label for="darkmode-btn">
       <svg version="1.0" class="sun" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 64 64"
@@ -130,8 +131,13 @@
       </svg>
     </label>
   </div>
-  <section id="home" class="about-me container">
-    <div class="about-me__text-column">
+  <div data-aos="fade-in">
+    Este texto irá aparecer com um efeito de fade in.
+  </div>
+
+  <section id="home" class="about-me container" data-aos="fade-in">
+    <div class="about-me__text-column" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000">
       <h2>Olá, meu nome é <span class="highlight"> Peter</span> e eu sou <br> <span id="typed"
           class="highlight">Programador</span> </h2>
       <p class="about-me__text">
@@ -164,19 +170,19 @@
         </button>
       </a>
     </div>
-    <div class="about-me__image-column col-md-6">
+    <div class="about-me__image-column" data-aos="fade-left"  data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000">
       <img class="about-me__profile-image" src="assets/images/peter-pic.avif" alt="Foto de Peter" />
     </div>
     </div>
   </section>
-  <section id="projects" class="container">
-
-    <h2 class="section-title">Projetos</h2>
-
-    <div class="swiper-container projects">
+  <section id="projects" class="container" data-aos="fade-in">
+    <h2 class="section-title" data-aos="zoom-in">Projetos</h2>
+    <div class="swiper-container projects" data-aos="fade-in">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <div name="Jogo da Memoria" class='card'>
+          <div name="Jogo da Memoria" class='card' data-aos="flip-left" data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000">>
             <div class="card__img-container">
               <figure class="card__img-container">
                 <a target="_blank" href="https://petertechdev.github.io/jogo-da-memoria/">
@@ -204,7 +210,8 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div name="Lista de Tarefas CRUD" class='card'>
+          <div name="Lista de Tarefas CRUD" class='card' data-aos="flip-left" data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">>
             <div class="card__img-container">
               <a target="_blank" href="https://todo-crud-98u0zgu6d-petertechdev.vercel.app/">
                 <img class="card__img" src="assets/images/todo.avif" alt="Capa de um jogo da memória">
@@ -227,7 +234,8 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div name="Advinhe o Numero" class='card'>
+          <div name="Advinhe o Numero" class='card' data-aos="flip-left" data-aos-easing="ease-out-cubic"
+            data-aos-duration="3000">>
             <div class="card__img-container">
               <figure class="card__img-container">
                 <a target="_blank" href="https://petertechdev.github.io/Adivinhe-o-numero/">
@@ -254,7 +262,8 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div name="Vanini Transportes" class='card'>
+          <div name="Vanini Transportes" class='card' data-aos="flip-left" data-aos-easing="ease-out-cubic"
+            data-aos-duration="3000">
             <div class="card__img-container">
               <figure class="card__img-container">
                 <a target="_blank" href="https://vaninitransportes.com/">
@@ -279,7 +288,8 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div name="Vanini Transportes" class='card'>
+          <div name="Vanini Transportes" class='card' data-aos="flip-left" data-aos-easing="ease-out-cubic"
+            data-aos-duration="3000">
             <div class="card__img-container">
               <figure class="card__img-container">
                 <a target="_blank" href="https://vaninitransportes.com/">
@@ -311,7 +321,7 @@
 
   </section>
   <section id="skills" class="container">
-    <h2 class="section-title">Habilidades</h2>
+    <h2 class="section-title" data-aos="zoom-in">Habilidades</h2>
     <p class="section-description">
       Estas são apenas algumas das competências que adquiri. Estou sempre ansioso para aprender mais e me adaptar às
       novas
@@ -320,7 +330,7 @@
     </p>
 
     <div class="skills">
-      <div class="skills__box">
+      <div class="skills__box" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
         <div class="skills__title">
           <div class="skills__icon-container">
             <img src="./assets/images/skills/html.png" alt="HTML 5 logo" class="skills__icon">
@@ -329,7 +339,7 @@
         </div>
         <p class="skills__description"> 2+ anos de experiência e sólida base de estudos.</p>
       </div>
-      <div class="skills__box">
+      <div class="skills__box" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
         <div class="skills__title">
           <div class="skills__icon-container">
             <img src="./assets/images/skills/sass.png" alt="Sass logo" class="skills__icon">
@@ -338,7 +348,7 @@
         </div>
         <p class="skills__description">2+ anos de experiência e sólida base de estudos</p>
       </div>
-      <div class="skills__box">
+      <div class="skills__box" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
         <div class="skills__title">
           <div class="skills__icon-container">
             <img src="./assets/images/skills/javascript.png" alt="Javascript logo" class="skills__icon">
@@ -347,7 +357,7 @@
         </div>
         <p class="skills__description">2+ anos de experiência e sólida base de estudos</p>
       </div>
-      <div class="skills__box">
+      <div class="skills__box" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
         <div class="skills__title">
           <div class="skills__icon-container">
             <img src="./assets/images/skills/git.png" alt="Git logo" class="skills__icon">
@@ -356,7 +366,7 @@
         </div>
         <p class="skills__description">2+ anos de experiência e sólida base de estudos</p>
       </div>
-      <div class="skills__box">
+      <div class="skills__box" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
         <div class="skills__title">
           <div class="skills__icon-container">
             <img src="./assets/images/skills/linux.png" alt="Linux logo" class="skills__icon">
@@ -365,7 +375,7 @@
         </div>
         <p class="skills__description">2+ anos de experiência e sólida base de estudos</p>
       </div>
-      <div class="skills__box">
+      <div class="skills__box" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
         <div class="skills__title">
           <div class="skills__icon-container">
             <img src="./assets/images/skills/scrum.png" alt="Agile logo" class="skills__icon">
@@ -374,7 +384,7 @@
         </div>
         <p class="skills__description">+2 anos trabalhando com metodologias ágeis, Jira, scrum, kanban e etc.</p>
       </div>
-      <div class="skills__box">
+      <div class="skills__box" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
         <div class="skills__title">
           <div class="skills__icon-container">
             <img src="./assets/images/skills/java.png" alt="Java logo" class="skills__icon">
@@ -383,7 +393,7 @@
         </div>
         <p class="skills__description">1+ de experiencia principalmente com java 8+ e utilizando springboot</p>
       </div>
-      <div class="skills__box">
+      <div class="skills__box" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
         <div class="skills__title">
           <div class="skills__icon-container">
             <img src="./assets/images/skills/typescript.png" alt="TypeScript logo" class="skills__icon">
@@ -393,7 +403,7 @@
         <p class="skills__description">Experiencia mais recente com boa base de estudos e alguns meses de experiencia
           migrando um projeto de java para node</p>
       </div>
-      <div class="skills__box">
+      <div class="skills__box" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
         <div class="skills__title">
           <div class="skills__icon-container">
             <img src="./assets/images/skills/angular.png" alt="Angular logo" class="skills__icon">
@@ -403,7 +413,7 @@
         <p class="skills__description">Experiencia mais recente com boa base de estudos e alguns meses de experiencia
         </p>
       </div>
-      <div class="skills__box">
+      <div class="skills__box" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
         <div class="skills__title">
           <div class="skills__icon-container">
             <img src="./assets/images/skills/cypress.png" alt="Cypress logo" class="skills__icon">
@@ -416,8 +426,9 @@
     </div>
   </section>
   <section id="contact" class=" container">
-    <h2 class="section-title" readonly>Contato</h2>
-    <div class="contact">
+    <h2 class="section-title" data-aos="zoom-in" readonly>Contato</h2>
+    <div class="contact" data-aos="zoom-out-down" data-aos-easing="ease-out-cubic"
+    data-aos-duration="1000">
       <form class="contact__form" onsubmit="submitForm(event)" name="peter-contact" netlify>
         <h1 class="contact__form-title">
           Entre em contato
@@ -458,23 +469,28 @@
 
           <label id="label-name">
             Nome
-            <input required type="text" name="name" placeholder="Digite seu nome" onblur="blurInput(this)" required autocomplete="name">
+            <input required type="text" name="name" placeholder="Digite seu nome" onblur="blurInput(this)" required
+              autocomplete="name">
           </label>
           <label id="label-email">
             Email
-            <input type="email" name="email" placeholder="email@email.com" onblur="blurInput(this)" required autocomplete="email"/>
+            <input type="email" name="email" placeholder="email@email.com" onblur="blurInput(this)" required
+              autocomplete="email" />
           </label>
           <label id="label-phone">
             Telefone
-            <input type="phone" name="phone" placeholder="(27) 99999-9999" onblur="blurInput(this)" autocomplete="cellphone-number"/>
+            <input type="phone" name="phone" placeholder="(27) 99999-9999" onblur="blurInput(this)"
+              autocomplete="cellphone-number" />
           </label>
           <label id="label-company">
             Nome da empresa
-            <input type="text" name="company" placeholder="Opcional: Nome da sua empresa" onblur="blurInput(this)" autocomplete="company-name"/>
+            <input type="text" name="company" placeholder="Opcional: Nome da sua empresa" onblur="blurInput(this)"
+              autocomplete="company-name" />
           </label>
           <label id="label-message">
             Mensagem
-            <input required type="text" name="message" placeholder="Digite sua mensagem" onblur="blurInput(this)" autocomplete="message"/>
+            <input required type="text" name="message" placeholder="Digite sua mensagem" onblur="blurInput(this)"
+              autocomplete="message" />
           </label>
         </div>
         <button type="submit" class="contact__form-button">
@@ -513,13 +529,13 @@
             </div>
           </div>
           <div class="contact__socials">
-            <a class="contact__socials--link" href="https://github.com/petertechdev" aria-label="Github" target="_blank" ><i
-                class="fab fa-github"></i></a>
-            <a class="contact__socials--link" href="https://www.linkedin.com/in/petertechdev/" aria-label="linkedin" target="_blank"><i
-                class="fab fa-linkedin"></i></a>
+            <a class="contact__socials--link" href="https://github.com/petertechdev" aria-label="Github"
+              target="_blank"><i class="fab fa-github"></i></a>
+            <a class="contact__socials--link" href="https://www.linkedin.com/in/petertechdev/" aria-label="linkedin"
+              target="_blank"><i class="fab fa-linkedin"></i></a>
             <a class="contact__socials--link"
-              href="https://wa.me/+5527998566488?text=Ol%C3%A1%21+Eu+vim+atrav%C3%A9s+do+seu+porti%C3%B3lio." aria-label="Whatsapp"
-              target="_blank"><i class="fab fa-whatsapp"></i></a>
+              href="https://wa.me/+5527998566488?text=Ol%C3%A1%21+Eu+vim+atrav%C3%A9s+do+seu+porti%C3%B3lio."
+              aria-label="Whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div> <!-- end contact infos -->
       </div>
@@ -546,5 +562,9 @@
   <button id="scroll-to-top" class="scroll-to-top">Subir</button>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script type="module" src="./script/main.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
+
 </html>
