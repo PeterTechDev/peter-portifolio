@@ -64,6 +64,10 @@ body.sticky-header {
 
 @media (max-width: 768px) {
 	.header__title {
-		font-size: $font-size-mobile;
+		font-size: 4rem;
+	}
+
+	.header__link {
+		padding: 5px;
 	}
 }

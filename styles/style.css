@@ -196,7 +196,10 @@ body.sticky-header .header__title {
 
 @media (max-width: 768px) {
   .header__title {
-    font-size: 5rem;
+    font-size: 4rem;
+  }
+  .header__link {
+    padding: 5px;
   }
 }
 .about-me {
