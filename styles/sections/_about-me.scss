@@ -60,15 +60,20 @@
     text-align: center;
     padding: 0;
 
-    @media only screen and (min-width: 1366px) {
+    @media only screen and (min-width: 968px) {
       padding: 40px;
     }
 
     img {
-      width: 100%;
+      width: 350px;
+      height: 200px;
       max-width: 800px;
-      height: auto;
       border-radius: 10px;
+    }
+
+    @media only screen and (min-width: 1366px) {
+      width: 600px;
+      height: 350px;
     }
   }
 

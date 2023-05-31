@@ -266,16 +266,22 @@ body.sticky-header .header__title {
   text-align: center;
   padding: 0;
 }
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 968px) {
   .about-me__image-column {
     padding: 40px;
   }
 }
 .about-me__image-column img {
-  width: 100%;
+  width: 350px;
+  height: 200px;
   max-width: 800px;
-  height: auto;
   border-radius: 10px;
+}
+@media only screen and (min-width: 1366px) {
+  .about-me__image-column {
+    width: 600px;
+    height: 350px;
+  }
 }
 .about-me__profile-image {
   animation: animate 3s linear infinite;
@@ -442,6 +448,13 @@ body.sticky-header .about-me {
   background-color: var(--color-highlight);
   padding: 10px 20px;
   border-radius: 150px;
+  transform: scale(0.8);
+}
+@media only screen and (min-width: 968px) {
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    transform: scale(1);
+  }
 }
 
 .swiper-button-next {
