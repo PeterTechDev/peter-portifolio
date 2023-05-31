@@ -1,7 +1,7 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 .light-theme {
-  --color-primary: #70D6FF;
+  --color-primary: #70d6ff;
   --color-secondary: #6c757d;
   --background-color: #ffffff;
   --color-text: #000000;
@@ -13,7 +13,7 @@
   --color-secondary: #5a5e62;
   --background-color: #1c1c1c;
   --color-text: #f8f8f8;
-  --color-highlight: #00F5D4;
+  --color-highlight: #00f5d4;
 }
 
 *,
@@ -36,6 +36,11 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("Montserrat.woff2") format("woff2"), url("Montserrat.woff") format("woff");
+  font-display: swap;
+}
 a {
   color: var(--color-text);
   font-family: inherit;

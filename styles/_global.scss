@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 // _variables.scss
 $header-height: 250px;
 $font-size: 8rem;
@@ -6,18 +8,18 @@ $container-hd-resolution: 1366px;
 
 // _colors.scss
 //LIGHT THEME
-$color-primary-light: #70D6FF;
+$color-primary-light: #70d6ff;
 $color-secondary-light: #6c757d;
 $color-background-light: #ffffff;
 $color-text-light: #000000;
-$color-highlight-light: #5a189a ;
+$color-highlight-light: #5a189a;
 
 //DARK THEME
 $color-primary-dark: #065c6c;
 $color-secondary-dark: #5a5e62;
 $color-background-dark: #1c1c1c;
 $color-text-dark: #f8f8f8;
-$color-highlight-dark: #00F5D4;
+$color-highlight-dark: #00f5d4;
 
 // _themes.scss
 @mixin theme($primary, $secondary, $background, $text, $highlight) {
@@ -30,11 +32,23 @@ $color-highlight-dark: #00F5D4;
 
 // _themes.scss
 .light-theme {
-  @include theme($color-primary-light, $color-secondary-light, $color-background-light, $color-text-light, $color-highlight-light);
+  @include theme(
+    $color-primary-light,
+    $color-secondary-light,
+    $color-background-light,
+    $color-text-light,
+    $color-highlight-light
+  );
 }
 
 .dark-theme {
-  @include theme($color-primary-dark, $color-secondary-dark, $color-background-dark, $color-text-dark, $color-highlight-dark);
+  @include theme(
+    $color-primary-dark,
+    $color-secondary-dark,
+    $color-background-dark,
+    $color-text-dark,
+    $color-highlight-dark
+  );
 }
 
 // _reset.scss
@@ -50,12 +64,18 @@ $color-highlight-dark: #00F5D4;
 
 html {
   scroll-behavior: smooth;
-  font-size: 62.5%;  // 1rem == 10px
+  font-size: 62.5%; // 1rem == 10px
   height: 100%;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("Montserrat.woff2") format("woff2"), url("Montserrat.woff") format("woff");
+  font-display: swap;
 }
 
 a {
@@ -89,7 +109,7 @@ section {
 
 // Resolve o problema da ancoragem do cabeçalho
 section::before {
-  content: '';
+  content: "";
   display: block;
   height: 60px;
   margin-top: -100px;
@@ -108,7 +128,7 @@ section::before {
 }
 
 // Paralax effect
-.bg-global{
+.bg-global {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -126,19 +146,19 @@ section::before {
   font-size: 5rem;
   margin-bottom: 2rem;
   position: relative;
-  
+
   @media only screen and (min-width: 768px) {
     margin-bottom: 5rem;
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     bottom: 0;
     left: 0;
     border-top: 1px solid #ccc;
-    
+
     @media (min-width: 980px) {
       bottom: -50%;
     }
