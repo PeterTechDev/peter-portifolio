@@ -66,16 +66,14 @@
 
     img {
       width: 350px;
-      height: auto;
-      max-width: 800px;
+      height: 197px;
       border-radius: 10px;
       
       @media (min-width: 768px) {
         width: 600px;
-        height: auto;
+        height: 337px;
       }
     }
-
   }
 
   &__profile-image {
