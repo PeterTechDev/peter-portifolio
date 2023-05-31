@@ -458,23 +458,23 @@
 
           <label id="label-name">
             Nome
-            <input required type="text" name="name" placeholder="Digite seu nome" onblur="blurInput(this)">
+            <input required type="text" name="name" placeholder="Digite seu nome" onblur="blurInput(this)" required autocomplete="name">
           </label>
           <label id="label-email">
             Email
-            <input type="email" name="email" placeholder="email@email.com" onblur="blurInput(this)" required />
+            <input type="email" name="email" placeholder="email@email.com" onblur="blurInput(this)" required autocomplete="email"/>
           </label>
           <label id="label-phone">
             Telefone
-            <input type="phone" name="phone" placeholder="(27) 99999-9999" onblur="blurInput(this)" />
+            <input type="phone" name="phone" placeholder="(27) 99999-9999" onblur="blurInput(this)" autocomplete="cellphone-number"/>
           </label>
           <label id="label-company">
             Nome da empresa
-            <input type="text" name="company" placeholder="Opcional: Nome da sua empresa" onblur="blurInput(this)" />
+            <input type="text" name="company" placeholder="Opcional: Nome da sua empresa" onblur="blurInput(this)" autocomplete="company-name"/>
           </label>
           <label id="label-message">
             Mensagem
-            <input required type="text" name="message" placeholder="Digite sua mensagem" onblur="blurInput(this)" />
+            <input required type="text" name="message" placeholder="Digite sua mensagem" onblur="blurInput(this)" autocomplete="message"/>
           </label>
         </div>
         <button type="submit" class="contact__form-button">

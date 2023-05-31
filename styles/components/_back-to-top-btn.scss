@@ -3,7 +3,7 @@
 .scroll-to-top{
 	color:var(--color-highlight);
 	padding-top:1.8em;
-	display: block;/* or block */
+	display: block;
 	text-decoration:none;
 	transition:all .3s ease-out;
   cursor: pointer;
@@ -15,14 +15,20 @@
   background: transparent;
 
   position: fixed;
-  bottom: 40px;
+  bottom: 60px;
   right: 30px;
+
+  @media (min-width: 768px) {
+    bottom: 40px;
+    right: 30px;
+  }
 
   &.show {
     opacity: 1;
     visibility: visible;
   }
 }
+
 .scroll-to-top:before{
 	content:'▲';
 	font-size:1.1em;
@@ -39,9 +45,11 @@
 	transition:transform .5s ease-in;
   text-align: center;
 }
+
 .scroll-to-top:hover{
   transform: translateY(-5px);
 }
+
 .scroll-to-top:hover:before{
 	transform: rotate(360deg);
 }

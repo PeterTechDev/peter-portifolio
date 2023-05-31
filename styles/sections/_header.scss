@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-@import '../variables';  // Importe o arquivo global que contém a paleta de cores
+@import "../variables";
 
 .header {
 	width: 100%;
@@ -9,17 +9,17 @@
 	position: fixed;
 	top: 0;
 	overflow: hidden;
-    transition: all 0.5s ease;
-    z-index: 100;
+	transition: all 0.5s ease;
+	z-index: 100;
 
-	&__title{
+	&__title {
 		font-size: 42px;
 		color: var(--color-highlight);
 		line-height: 230px;
 		transition: all 0.5s ease;
 	}
 
-	&__nav{
+	&__nav {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
@@ -43,7 +43,7 @@
 			border: 2px solid var(--color-highlight);
 		}
 
-		&:hover{
+		&:hover {
 			box-shadow: 0 0 0 1px var(--color-highlight);
 			transform: scale(0.9);
 			cursor: pointer;
@@ -51,8 +51,7 @@
 	}
 }
 
-/* Sticky Header Style */	
-/* ---------------------------------------- */ 
+/* Sticky Header Style */
 body.sticky-header {
 	.header {
 		height: 60px;
@@ -64,9 +63,8 @@ body.sticky-header {
 	}
 }
 
-// Media queries for responsive font size
 @media (max-width: 768px) {
-    .header__title {
-        font-size: $font-size-mobile;
-    }
+	.header__title {
+		font-size: $font-size-mobile;
+	}
 }
