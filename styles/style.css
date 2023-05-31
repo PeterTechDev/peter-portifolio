@@ -533,6 +533,10 @@ body.sticky-header .about-me {
   transition: all 0.3s ease-in-out;
   z-index: 2;
 }
+.skills__icon img {
+  width: 50px;
+  height: 50px;
+}
 .skills__icon-container {
   width: 90px;
   height: 90px;
