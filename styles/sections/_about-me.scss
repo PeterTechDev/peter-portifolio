@@ -69,12 +69,13 @@
       height: auto;
       max-width: 800px;
       border-radius: 10px;
+      
+      @media (min-width: 768px) {
+        width: 600px;
+        height: auto;
+      }
     }
 
-    @media only screen and (min-width: 1366px) {
-      width: 600px;
-      height: auto;
-    }
   }
 
   &__profile-image {

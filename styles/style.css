@@ -277,8 +277,8 @@ body.sticky-header .header__title {
   max-width: 800px;
   border-radius: 10px;
 }
-@media only screen and (min-width: 1366px) {
-  .about-me__image-column {
+@media (min-width: 768px) {
+  .about-me__image-column img {
     width: 600px;
     height: auto;
   }
